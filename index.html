@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#C07A18">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ZaagPlan">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
+  <title>ZaagPlan</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #F4F1EC;
+      overscroll-behavior: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+      color: #C07A18;
+      gap: 16px;
+    }
+    #loading .icon { font-size: 48px; }
+    #loading .text { font-size: 18px; letter-spacing: 2px; }
+    #loading .sub  { font-size: 12px; color: #B0A99E; }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="loading">
+      <div class="icon">🪚</div>
+      <div class="text">ZAAGPLAN</div>
+      <div class="sub">laden...</div>
+    </div>
+  </div>
+
+  <!-- Libraries (cached by service worker for offline use) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+
+  <!-- App -->
+  <script type="text/babel" src="app.js"
+    data-presets="react"
+    data-plugins="transform-optional-chaining,transform-nullish-coalescing-operator">
+  </script>
+
+  <!-- Service Worker registratie -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('ZaagPlan: offline klaar'))
+          .catch(e => console.log('SW niet beschikbaar:', e.message));
+      });
+    }
+
+    // iOS: toon "Voeg toe aan beginscherm" hint eenmalig
+    const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+    const isStandalone = window.navigator.standalone;
+    const shownHint = localStorage.getItem('zp_ios_hint');
+
+    if (isIOS && !isStandalone && !shownHint) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const banner = document.createElement('div');
+          banner.style.cssText = `
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: #1E1A15; color: white;
+            padding: 14px 18px 28px; font-family: sans-serif;
+            font-size: 14px; line-height: 1.6;
+            display: flex; gap: 12px; align-items: flex-start;
+            z-index: 9999; animation: slideUp .3s ease;
+          `;
+          banner.innerHTML = `
+            <div style="font-size:28px;flex-shrink:0">🪚</div>
+            <div style="flex:1">
+              <strong>Installeer ZaagPlan</strong><br>
+              Tik op <strong>Deel</strong> (↑) en dan
+              <strong>"Zet op beginscherm"</strong> voor offline toegang.
+            </div>
+            <button onclick="this.parentElement.remove(); localStorage.setItem('zp_ios_hint','1')"
+              style="background:transparent;border:none;color:#B0A99E;font-size:20px;cursor:pointer;padding:0;flex-shrink:0">✕</button>
+          `;
+          document.body.appendChild(banner);
+        }, 2500);
+      });
+    }
+
+    // Android / Chrome: install prompt
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (localStorage.getItem('zp_installed')) return;
+      setTimeout(() => {
+        const btn = document.createElement('button');
+        btn.style.cssText = `
+          position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+          background: #C07A18; color: white; border: none;
+          padding: 13px 24px; border-radius: 50px;
+          font-family: sans-serif; font-size: 15px; font-weight: 700;
+          cursor: pointer; z-index: 9999; box-shadow: 0 4px 16px rgba(0,0,0,.3);
+          white-space: nowrap;
+        `;
+        btn.textContent = '🪚 Installeer ZaagPlan';
+        btn.onclick = () => {
+          deferredPrompt.prompt();
+          deferredPrompt.userChoice.then(r => {
+            if (r.outcome === 'accepted') localStorage.setItem('zp_installed', '1');
+            btn.remove();
+          });
+        };
+        document.body.appendChild(btn);
+      }, 2000);
+    });
+  </script>
+
+  <style>
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to   { transform: translateY(0); }
+    }
+  </style>
+</body>
+</html>
