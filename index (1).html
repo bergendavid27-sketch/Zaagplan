@@ -1,0 +1,2319 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ZaagPlan">
+  <meta name="theme-color" content="#C07A18">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%20%22ZaagPlan%22%2C%20%22short_name%22%3A%20%22ZaagPlan%22%2C%20%22description%22%3A%20%22Hout%20zaagplan%20optimalisatie%22%2C%20%22start_url%22%3A%20%22./%22%2C%20%22display%22%3A%20%22standalone%22%2C%20%22background_color%22%3A%20%22%23F4F1EC%22%2C%20%22theme_color%22%3A%20%22%23C07A18%22%2C%20%22orientation%22%3A%20%22portrait-primary%22%2C%20%22lang%22%3A%20%22nl%22%2C%20%22icons%22%3A%20%5B%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAHuElEQVR4nO2cS44bWQwE%2BxhzVp/Oy7lVGbUQILR%2BVaVHRpLMALiVH5kZMOQ2%2BucH5u%2Bf/zbP3KH7lwJ9ZE/NoXt7GfpwleY39HuUh%2B71R%2BgDVZxvoN9ODd3zB%2BiDVJ7V0PtkDt17F3/BREPvlzEuf%2BHJht43alz%2BokNC7756XPyCowJ9h5Xj8hcaNeh7rBqX/03R6Le8epcC9D1Wjsv/omD0mz69j4S%2Bx%2BoZK0CVoJWgbxEx48pfLWwl6FtEzYjyVw1cBfoO0ePyi4auAn2HjGknQIfQVaDvkDFtyt8peAXoG2ROeQG6ha8AfYPMKVv%2BrgWgoXMlppwA1UpQCTpbGQHoR5FlUn9fJHS%2BMhLQD6KLpfquSOiMLYBQydTekwGdswUQK5vKOzKgc6bH5R8OnbXCSAlgGOjcLYDLLwHdgZECGD3oUo4RwGhDl9MCGAmy%2BzBGAEtQh%2BwepApAld8S1CMr/8z%2B4QJYglpk5T5KAEtQj4y8RwlgCeqRkfMoASxBPTLyHSWAJahJdK6jBLAENYnOc5QAXSR4stP/n6byHSJzHCdAh/BXCFDtLpHvHCeActgXd1kigPqNIt80TgClgBfsESKA4q0iGSWAAgt3CRdA6W5RjBGAJmCfNAFUbhhFewGqH1dFAIV7RtFWgKoHVRaAvm0ELQWoeMhKAnQTwQKAB6wsQBcJWglQ5XBdBOgiQgsBKhysqwBTJZARQP1QEwSoLoEFCDjQNAGqi1BSAMXDTBegqgTlBFA8igWYI0F7Aej9qgtQUYIyAigdwgLMlKDtb4WjC9NNgGoSjBaALkpXATpK0O4X49IF6S5AJQksgOBsFiCNZQKc/VCXv7cA6hKc2eO0AFf%2BkIzD0YWYJoCiBFd2%2BCjAyj9YaXEL0EOCb9%2B/RICjj4mCLoEFyGfV%2B5cK8O6BUdAFmC5ApgQRb38rwMpHR0AHbwFyJIh8d7gAkdChW4D4rkS/u6wAdOAWIKcvmADq0GFbAAuAQQdtAfpIYAEsgAWoJAAdsAXIlyBdAGXocC1AvgCRuZcSgA7WAnASWIDNAlSaKtmXEYAO1AL0lOBBAFXoMC2ABUChw7QAFgCDDtICaEhgARrMZgGkumABLIAFUC7/Dh2iBbAAGHSAQQK8o5UAq3tlAYqOd9fsgwUQLwD9dnr/6JtYgALh0zso3CDqHhagSPD0Lip3WH0LaQHo4JRC9z1i7mABxMP2TWJvYAGEg/Zd4ve3AMJB%2By7x%2B0sLsB34qangZEDviN4lRABR6NAUy3%2BD3tUCJECHZgEEb2MBdCcTelcLkAAdmgWoeZtDPHwJVvu2v/GhKYdM76p8m0NYgNoh07sq3%2BYQFqB2yPSuyrc5hAWoGzS9o%2BpdDvPwJVhRgNVvy5gM6B1V73IGC1A4aHpH1bucwQIUDZveTfEmV7AABQOnd1K7xzeUEOD%2BoRXHd9As/44FKBQ%2BvYPCDVZjAYoUgH47vX8UYQKsXpgOj7wJ/WbFPqzCAnBl%2BPRDIf9muATKCHD/2A6zHfipKf1G5S6swgJYgLEC3L/PAlgAC6C%2BOB2iBdDowSrKCfD70ZVnGySAKhbAAlgAC2ABJgrw%2B41hAliC2QKoYgH4YlgAkNICPFug2mwDBFAmVYCIY9DhWoC6Ajx7azkBXi1SZbbmAihjAQRmswAYiACWYI4A6lgAgdksAMKrN5cV4N1SyrM1FUAdTABiKeXZLMDpfFd%2BVpoAWdDBW4C8v%2BFXfU6YABR0ASYLQGW66rOWCEBDl8ACcJl%2B%2B1mXBVCDLsJEAdSyvPJZpwVQhi7EJAGUczzzWYcFqAJdjAkCdMrPAlgAC0AvvRq6IJ0F6Jbbqe8AlaCL0lGAjpm1FWCHLkwnAbpm1epfgZ5BF6eDAJ0zai/ADl2gygJ0z%2BfSD8IqQhepogATchkjwA597EoCTMmjzX%2BFOIMF0MiVLv9YAXYsgMv/lQCWoJcA3e8eIkAHCXYmC9D51hbgBBMF6HznNAE6SbAzQQAKuuwW4AQdBSChix4qAH3cSDoIQEOXPEUAhUNHUlEABeiCW4DFVBBABbrc6QJEHl8p2BtKAqhCFzxdgIgwKgS9kylAJeiSpwuwMqBu4W8XBOgAXfSSAmQIZvKgy54qwLclzZLM5EIXPlWAqyXNFM3kQ5c%2BVYCzBc0UzXDQxU8V4GhBM0UzPHT5UwX4VNBs2YwGuAA7tATZshkt0PLTAhDCGT3GCHBfSko6o8kYAagx2lgAizAWogdjBbAIOpD5jxfAIrDQuf/cQz9GYUwedNY/v6EfpDDdUdmVztkCDCq/2s50zhZAqAxRqO5MZ/xWgMkSVEd9dzrfQ%2BW3ADWotjud7SkBpkpA03V3Otdn87b8EwVQoNsN6H3ezUcBpkmgQKcb0Lu8m0PlnySACvQdVtyCfv%2BROSzAFAlUoO/wzS3odx%2BdU%2BWfIoEK9B2u3oJ%2B89G5VP7uEihB3%2BLsTeh3npmvym8BcqBvcfQm9PuuzNcCdJRADfoen25Dv%2BnqLCl/RwnUoO/x6jb0W76ZpeXvJoEa9D26TUj5LUIc9B26THjxO0pwGwtQe1LL31WC21iAWoOUf4IIt7EAmkP3/gH6IFljAdihe/4R%2BkDEWID4oXt9GfpwamMBjg3d2xToI3tml/wfVvSU7AEYgXAAAAAASUVORK5CYII%3D%22%2C%20%22sizes%22%3A%20%22192x192%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%2C%20%7B%22src%22%3A%20%22data%3Aimage/png%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAhaklEQVR4nO3dW7Jkt7JcUTZDbVXr9Hl6taQUb5165c6dDwAeCIxpNn9ZuSIcgJvRWPznHwzn//zv/3WRJMeZvtdxIOnQkyTfM/1%2BYCPSYSVJzjX9zqAI6SCSJLOm3yEsJB02kmRN0%2B8TJpAOFUlyL9PvFj4gHR5yB2eQ/iZytOn3DE%2BSDgq5k0nS306%2Bavp9wx3SoSB3tSrpuZDfmX73jicdAHJ3dyM9L/JP0%2B/gcaQXTnaxC%2Bk5kul38QjSSyY72ZX0XHmm6fexLenFkh09ifSseY7p97IN6UWSnT2Z9OzZ3/T7uTXp5ZHdxU/Su2BP0%2B/odqQXRp4i7pPeC/uZfle3IL0k8iTxHOk9sYfp97Us6cWQJ4rXSe%2BM%2B5t%2Bb0uRXgZ5qviM9P64r%2Bl3twTpJZAni3Gkd8n9TL%2B/UdLDJ08Xc0jvlfuYfocjpIdOUgGYTXq/3MP0e7yM9KBJ/hTrSO%2Ba9U2/z1NJD5fk7yJDeu%2Bsa/qdnkJ6qCT/FlnS%2B2dN0%2B/1UNLDZE1dgnmRJb1/1jX9bg8hPUTW0iVYS2RJ75%2B1Tb/fH5EeHuvoIqwpcqR3zz1Mv%2BNvkR4aa%2BgyrC1ypHfPfUy/5y%2BTHhizugz3EDnSu%2Bc%2Bpt/zl0gPizldiHuJDOm9cz/T7/pTpIfEjC7FPUWG9N65p%2Bn3/SHp4XC9Lsa9xXrSO%2Bfept/5u6SHwrW6HHuI9aR3zv1Nv/e/kR4G1%2BmC7CXWkt43%2B5h%2B9/9LehCcr0uyp1hLet/sY/rd//%2Bkh8C5uiR7i7Wk981eevw5xTTp7z9FrCO9a/ZUAeAwq5CewyliHelds6cefw6xGul5nCDWkN4ze%2Bvx59tWJT2XE8Qa0ntmfxUAvmR10vM5QawhvWf21%2BPPp92F9Jy6i/mkd8xzVAD40N1Iz6u7mE96xzxHjz/vujPp2XUWc0nvl%2Bfp8edv7k56fp3FXNL75ZkqAEzffUNJz7KrmEd6tzxXj//hdiM9z65iHund8mwVgAPtSnquXcU80rvl2Xr8D7M76fl2FHNI75W8qQAc4Cmk59xRzCG9V/KmAtDc00jPu5sYT3qn5A89/k09lfTcq4i6pLNB/qoC0MyTSc/efvEd6fyQv%2BrxbyT6XLDoRzpT5D0VgM3FT9K7sDt8RTpr5D0VgI3F36R3Ylf4k3T2yK/0%2BG8q7pPei/3gT9JZJB%2BpAGwkHmMvqEb6ziAfqQBsIp7DPlCF9J1BfqfHfwPxPHaAKqTvDfIZFYDC4nXMHmnS9wb5rApAQfE%2B5o406fuDfFaPfzHxOeaNFOn7g3xVBaCIGIM5I0X6DiFfVQEoIMZhxkiRvkfIV1UAwmI8ZovVpO8R8h09/kEB9CB9l5DvqgAsFkBf0vcL%2BYoKwEIBnEH6riGfUQFYJIDzSN875CMVgAUCOJv0HUTe0%2BM/WQD4Qfo%2BIv9UAZgkANwjfTeRP1QAJggA35G%2Bp0gFYLAA8ArpO4vnqgAMFADeJX1/8TwVgEECwAjSdxnPUQEYIACMJn2vsb8KwIcCwEzSd9wOmtN7KgADBICZpO%2B4yprT%2ByoAgwSA2aTvuWqa0WcqAAMFgBWk77oKms/nKgCDBYAVpO%2B66vds%2BjfuoAIwQQBYRfq%2Bq3y/pn9rdT3%2BkwSAVaTvu8r3avo3V1cBmCQArCR951W9T9O/vbIKwEQBYCXpO6/qPZr%2BhqoqAJMFgNWk772K92f6WyqqACwQAFaTvvcq3pvpb6qmArBIAFhN%2Bt6reF%2Bmv62SCsBCASBB%2Bu6rdE%2Bmv6%2BSCsBiASBB%2Bu6rdD%2Bmv7OKCkBAAEiQvvsq3Yvp762gAhASAFKk778q92H6u9MqAEEBIEX6/qtyD6a/P6kCEBYAUrj//iU9h5QKQAEBIIl778wSoAAUEQCSnH7fpd%2BAhApAIQEgyen3XPoNWK0CUEwASHL6/ZZ%2BA1aqABQUAJKcfq%2Bl34BVKgBFBYA0J99n6TdghQpAYYFX%2BJ/M/Ge2snkWp95j6ft/hQpAcYEbL%2BRlSQGQ3bM49f5K3/%2BzVQA2EOcwICtlCoA89%2BLUPafv/5kqAJuIfkzKSfkCIN/7cuo%2B0/f/LBWAjcTeLMrIlgVA1vfhxN2l7/5ZKgCbiX0I5aNFAZD72py4p/TdP0MFYENRlwLZaFkA5L8eJ%2B4lnf3RKgCbijqks/BHLtoXAOegDifuIZ35kSoAG4sc6d0/yMRRBcB5wGrSOR%2BpArCxWEt6309m4tgC4GxgFel8j1IB2FSsIb3nN3KhADgrWEA61yNUADYU80nv%2BINsKADODRaQzvMIFYDNxFzS%2Bx2QDwXAGcIi0ln%2BVAVgIzGH9F4HZ0QBcKawkHSGP1EB2ESMJ73TSTlRAJwvLCSd3U9UADYQY0nvc3JWFABnDYtJ5/ZdFYDiYhzpXS7KiwLg3CFAOrPvqAAUFmNI73FxZhQAZxAB0ll9RwWgqPic9A5DuVEAnEeESOf0VRWAouJ90rsL50YBcC4RJJ3RV1QACor3Se8u7aUAOJ%2BIks7nKyoAxcR7pPdWxUsBWDlr4C7pbD6rAlBIvE56Z9W8FIDEzIHfSGfyWRWAIuJ10jur6KUApOYO/EY6k8%2BoABQQr5HeV2UvBSA9f%2BC/pPP4nQpAAfE86V1V91IA4gI/SGfxOxWAsHiO9J528VIAygjcSOfwkQpAUDxHek87eSkApQTSGXykAhAS35Pe0Y5eCkBJcTbp/H2lAhASj0nvZ1cvBaCsOJt0/u6pAATEY9L72dlLASgtziWdvXsqAIvF16R308FLAdhCnEk6d3%2BqADj0JUjvpouXArCNOI905v5UAXDg46T30slLAdhKnEc6c7%2BqADjoMdI76eilAGwpziGdtV9VABzuCOmddPVSALYV55DO2g8VAId6OemddPZSALYWZ5DO2Q8VAAd6Kel9dPdSALYXZ5DO2U0FwEFeRnofJ3gpAC1Ef9IZu6kAOMBLSO/jFC8FoI3oTzpjCoDDO5X0Hk7zUgDaib6ks6UAOLDTSO/hRC8FoKXoSzJXCoCDOoX0Hk71UgDaip4kM6UAOKTDSe/gZC8FoLXoSSpPCoDDOZT0Dk73UgDai36ksqQAOJTDSO%2BACsApoh%2BJHCkADuQQ0vPnf3OoABwiepHIkALgIH5Mev78LYsKwEGiF6vzowA4hB%2BRnj3/yqICcJjow%2BrsKAAO39ukZ8%2B7eVQADhR9WJkbBcChe5v0/Hk3kwrAgaIPK3OjADh0b5GePb/MpAJwqOjDqswoAA7by6Rnz4e5VAAOFj1YlRcFwEF7ifTc%2BW0uFYDDRQ9WZEUBcMCeJj13PpVNBYCrrgRMZEVOFACH6ynSM%2BfT2VQA%2BCML2JgVGVEAHKpvSc%2BcL%2BVTAeCvecDGzM6HAuBAfUt65nwpnwoAf80DNmZ2PqYXgJUf4zCNJz1zvpxRBYB/ZgKbsSobSwtA4gMdpPdJz5tvZVQB4L1coDiJXEwtAFU/2gH6nvS8%2BXZOFQB%2BlQ0UJJmJeAGoMASH52/S8%2BbbOVUA%2BFU2UIh0Hm6WKQDVBnPywUnPmx9lVQHgo3wgSHr/fzqtAHQa1kmkZ82Ps6oA8LuMYDHpnX9l6QJQYYAnkQ4jh%2BRVAeAzOcFk0jt%2Bxm0KQGqoJ5EOI4fkVQHgMznBJNK7fcUpBaDLkE8iHUQOy6wCwGezgoGk9/mO2xaAFYM/hXQIOTSzCgBfyQs%2BIL2/Tx1eALos4yTSIeTQ3CoAfCUveIP03kbZqgD8SpfvmE06gBzrpQDw9czgCdJ7mmHbAvCDDt8wi3T4ON5LAeB7ucEXpHcz06EFoDpdvmMU6fBxvJcCwPdyg19I72OVRxWAH3T4hk9JB49zvBQAvp%2Bd40nvYLVHFoAfdPiGd0iHjvO8FAB%2Blp8jSc895bACsDtdvuMZ0qHjPC8FgJ/l5xjSs66gAnAY6cBxrpcCwM8z1J70jKuoABxGOnCc66UA8PMMtSc94yoOKQDYg3TYON9LAeCYHLUnPeMKKgCHkA4a13gpAByXpdak51tBBeAQ0kHjGi8FgOOy1Jr0fCv4cQFAfdIh4zovBYBj89Sa9HzTKgAHkA4Z13kpABybp9ak55tWAWhOOmBc66UAcHymWpOeb1IFoDnpgHGtlwLA8ZlqTXq%2BST8qAKhNOlxc76UAcE6u2pKebVIFoDHpcHG9lwLAOblqTXq%2BKRWApqSDxYyXAsB52WpLerYp3y4AqE06WMx4KQCcl622pGebUgFoSDpUzHkpAJybr7akZ5tQAWhIOlTMeSkAnJuvtqRnm1ABaEY6UMx6KQCcn7GWpOea8K0CgLqkA8WslwLA%2BRlrS3q2q1UAmpEOFLNeCgDnZ6wt6dmuVgFoRDpMzHspAFxgV9JzXa0C0Ih0mJj3UgC4wM6kZ7vSlwsAapIOEmt4KQBcZFfSc12pAtCEdJBYw0sB4CK7kp7rShWABqRDxDpeCgAX2pH0TFeqADQgHSLW8VIAuNCupOe6SgWgAekQsY6XAsCFdiU911W%2BVABQj3SAWMtLAeBiO5Ke6SoVgM1JB4i1vBQALrYr6bmuUAHYnHSAWMtLAeBiu5Ke6woVgI1Jh4f1vBQABuxIeqYrfLoAoB7p8LCelwLAgB1Jz3SFCsDGpMPDel4KAAN2JT3X2SoAm5IODmt6KQAM2ZH0TGerAGxKOjis6aUAMGRH0jOdrQKwKengsKaXAsCQHUnPdLYKwIakQ8O6XgoAg3YkPdOZPlUAUIt0aFjXSwFg0I6kZzpTBWBD0qFhXS8FgEE7kp7pTBWAzUgHhrW9FACG7UZ6njNVADYjHRjW9lIAGLYb6XnOVAHYjHRgWNtLAWDYjqRnOksFYDPSgWFtLwWAYTuSnuksvy0AqEM6LKzvpQCwgN1Iz3OWCsBGpMPC%2Bl4KAAvYjfQ8Z6kAbEQ6LKzvdf/R/gQFgC/bjfQ8Z6kAbEQ6LKzv9fmD/x0KAL%2B1G%2Bl5zlIB2IR0UFhfeWQlu5Ge5wwVgE1IB4U1rUB6BqxpN9LznKECsAnpoLCelUjPgvXsRnqeM3xYAFCHdFBYx8qkZ8M6diM9zxkqAJuQDgrz7kR6VszbjfQ8Z6gAbEA6JMy7I%2BmZMW8n0rOcoQKwAemQMOvOpGdH2R1Jep6jVQA2IB0S5uxAeoaU31Gk5zlaBWAD0iFhxk6kZ0kZHkF6nqNVADYgHRKutyPpmVKOPyU9z9EqABuQDgnX2pn0bCnLn5Ce52gVgOKkA8K1nkB6xpTpd0nPcrQKQHHSAeE6TyI9a8r1O6RnOdovCwBqkA4I13kS6VlTrt8hPcvRKgDFSQeEazyR9Mwp26%2BSnuVoFYDipAPCNZ5IeuaU7XdIz3OkCkBx0gHhfE8mPXvK96uk5zlSBaA46YBwrpDx7nYjPc%2BRKgDFSQeEc4WMd7cb6XmOVAEoTjognCtkvLvdSM9zpApAYdLh4Fzxk/QuKOvPkp7lSBWA2vyHrcVP0rugrD9F%2BtFWAM4hfWjpQlxJeieU929JP9oKwDmkDy1diCtJ74Ty/i3pR1sBOIf0oaULcSXpnVDevyX9aCsA55A%2BtHQhriS9E8r7t6QfbQXgHNKHli7D1aR3Q5l/SPrRVgDOIX1o6TJcTXo3lPmHpB9tBeAc0oeWLsPVpHdDmX9I%2BtFWAM4hfWjpMlxNejeU%2BYekH20F4BzSh5Yuw9Wkd0OZf0j60VYAziF9aOkyXE16N5T5h6QfbQXgHNKHli7D1aR3Q5l/SPrRVgDOIX1o6TJcTXo3lPmWvFQAdrUZ6UNLl%2BFq0ruhzLdEAdiP9KGly3A16d1Q5luiAOxH%2BtDSZbia9G4o8y1RAPYjfWjpMlxNejeU%2BZYoAPuRPrR0Ga4mvRvKfEsUgP1IH1q6DFeT3g1lviUKwH6kDy1dhqtJ74Yy3xIFYD/Sh5YuxJWkd0J5b4sCsB/pQ0sX4krSO6G8t0UB2I/0oaULcSXpnVDe26IA7Ef60NKFuJL0TijvbVEA9iN9aOlSXEV6F5T11igAm5GeJWV1FeldUNa7c28vCkBx0vOkvM4mvQPK%2BAnc240CUJz0PCmvs0nvgDJ%2BAvd2owAUJz1Pyuts0jugjJ/Avd0oAMVJz5MyO5P07Cnfp3BvNwpAcdLzpNzOIj1zyvZJ3NtNuwLQLXDpWVJmZ5GeOWX7JO7tRgEoTnqWlNsZpGdNuT6Ne7tRAIqTniXldgbpWVOuT%2BKr3SgAxUnPkrI7mvSMKdOn8dVuFIANSM%2BT8juK9Gwpyyfy1X4UgA1Iz5MyPIL0TCnHp/LVfhSADUjPk3L8KelZUoZP5qv9KAAbkJ4nZfkT0jOk/J7OV/tRADYgPU/K87ukZ0fZxWEFoFvw0rNk3h1Jz4x5UYOv9qMAbEJ6nsy7E%2BlZMS/q8NWOFIBNSM%2BTdaxMejasI%2Brw1Y4UgE1Iz5P1rER6FqwnavBoRwrAJqTnyZpWID0D1hQ1eLQjBWAT0vNkfeWRlUQNHu2obQHoGMD0PFnf/8d/JsfwP%2BlvZH1Rh0d7UgA2Ij1P1vf6twD86Sf89c9LfyPrizo82pMCsBHpebK%2B1/0CMNT0N7K%2BqMOjPSkAG5GeJ%2Bt7KQAsIOrwaE8KwGakZ8raXgoAw6IO3%2B1KAdiM9ExZ20sBYFjU4btdtS4AHcOYnidreykADIs6fLcrBWAz0vNkbS8FgGFRh%2B92pQBsSHqmrOulADAoavHdvhSADUnPlHW9FAAGRS2%2B25cCsCHpmbKulwLAoKjDM/tqXwC6hjI9U9b0UgAYErV4ZmcKwKakZ8qaXgoAQ6IWz%2BxMAdiU9ExZ00sBYEjU4pmdKQAbk54r63kpAAyIejyztyMKQNeApmfKel4KAAOiHs/sTQHYmPRMWc9LAWBA1OLZvSkAm5OeK2t5KQBcLOrx7O4UgM1Jz5W1vBQALhb1eHZ3xxSArkFNz5S1vBQALhb1eHZ3CkAD0nNlHS8FgAtFPV7ZnwLQgPRcWcdLAeBCUY9X9ndUAega2PRMWcdLAeBCUY9X9qcANCE9V9bwUgC4SNTklR0qAE1Iz5U1vBQALhI1eWWHCkAj0rNl3ksB4AJRk1f3eFwB6Bze9FyZ91IAuEDU5NU9KgDNSM%2BW8WwrAJydMRTl1V0qAM1Iz5bxbCsAnJ0xFOXVXR5ZADqHOD1XxnOtAHB2xlCQd3apADQkPVtGc60AcGa%2BUJR39qkANCQ9W0ZzrQBwZr5QlHf2eWwB6B7m9GwZy7QCwFnZQmHe2akC0JT0bBnLtALAWdlCUd7dqQLQmPR8Gcm0AsAZuUJh3t3r0QWge7DTs2UkzwoAZ%2BQKhXl3rwpAc9Lz5fI8KwAcnSkU5pPdKgDNSc%2BXy/OsAHB0plCYT3Z7fAE4IeDp%2BXJplhUAjswTivPJfhWAA0Keni%2BXZlkB4Mg8oTif7FcBOCTo6flyWY4VAI7KEorz6Y4VgEPCnp4vl%2BVYAeCoLKE4n%2B5YATgo7OkZc0mOFQCOyBE24NM9KwCHhT49Y07PsALATzOEDRixawXgsOCnZ8zpGVYA%2BGmGsAEjdq0AHBj69Kw5NccKAD/JT3u6fOuIfR9dAE4lPXdOzbQCwE/y054O3z1q30cWACgBXb0UAL6fnSPoMINROz%2BqAOB30vvglIwrAHwnN0fQZR6j9t6%2BAOBr0rvhlLwrAHwnN0fQYTYj9962AOA50nvi8NwrAHw1M0fQZU4jd9%2BqAOA90nvj0DOgAPCVvBxDl7mN/I4WBQCfkd4fh54FBYCv5OUIusxv9O/ftgBgLOl9cti5UAD4bFaOocs8R//m7QoA5pHeLYecDwWAz%2BTkGLrMdsZv3aYAYD7pHXPIOVEA%2BExOjqHLjGf8xtIFAOtJ75wfnxkFgN9l5BjSsx458xm/q2QBQJb0/vnR2VEA%2BCgfR5Ge96j5z/o9ZQoAapHOA98%2BRwoAv8rGUaTnPXIfs35DvACgJulc8O3zpADwq2wcRXreI/cy68%2BOFQDUJ30w%2BNa5UgB4LxdHkZ73yB3N/DOXFgDsR/pQ8OUzpgDwz0wcR3rmI3c2889ZUgCwN%2BnDwJfOmgLAX/NwHOmZ76QCgG9Jh5QvnTUFgL/m4TjSM9/JZf8KAHuTDiqfPmcKAH9k4TjSM99NBQBPkw4rnzpnCgBXXQnlSM99NxUAvEQ6sPz2nCkAh3sq6bnvqP8KAC%2BTDi0fnjEF4GBPJj37HVUA8Bbp4PLLM6YAHOrJpGe/q8v/IiD0IR1e3j1fCsCBnk56/ruqAOBt0uHl3fOlABzoyaRnv7ORvwoYfUgHmH%2BdLQXgME8mPfvdVQDwMekQ87ezpQAc5Omk57%2B7/mdAGEI6yPzvuVIADvF00vPvoAKAYaTDTAXgFOG%2BGWGsAAhxT9KBPt1LAWgv3DOjVAAwnHSoT/ZSAFoL98tIowVAoPuSztWpXgpAW/Ev6T10UgHANNLZOtFLAWgp/iW9h27GC4Bw9yadrdO8FIB24l/Se%2BioAoAlpDN2ipcC0Eb8TnofHS1RAIT9DNIZO8FLAWghfie9j64qAFhKOmfdvRSA7cXvpPfR2TIFQPDPIZ2zzl4KwNbib9I76awCgAjprHX1UgC2FX%2BT3kl3SxUAh%2BAs0lnr6KUAbCn%2BJr2TE1QAECeduU5eCsBW4j7pvZxiuQLgUJxJOnNdvBSAbcTXpHdzigoAypDOXQcvBWAL8TXp3ZxkyQJwE%2BeSzt7OXgpAafGY9H5OUwFASdL529VLASgrHpPez4mWLQA3cTbp/O3opQCUFN%2BT3tGJli4AN4F0BnfyUgBKiedI7%2BlUFQBsQTqHu3gpAGXEc6T3dLLlC8BN4AfpLFb3UgDi4nnSuzpdBQDbkc5jZS8FID1/vEB6X6e7RQG4CfxJOpMVvRSA1NzxIumdcaMCcBP4k3Qmq3kpAImZ40XSO%2BO/KgBoQTqbVbwUgJWzxhuk98afblUAbgKPSOcz7aUAuIMKk94df1cBQDvSGQ2fDwXA/VOS9O74t9sVgJvAM6RzGjobCoA7pyTpHfJvtywAN4FnSWd18blQANwz5UjvkfdVAHAM6cwuOhcKgPulFOld8mu3LQA3gXdI53bymVAA3CllSO%2BTj926ANwE3iWd3UnnQQFwj5QgvVN%2BrwKA40lnePB5UADcH3HSe%2BVzbl8AbgKjSGd5wFlQANwXUdL75fO2KAA3gZGk8/zBOVAA3BEx0jvmayoAwAPSuX7jHCgA7oYI6T3zddsUgJvATNL5fvIMKADuguWk9833bFUAbgIrSOf8Qf6PLQDIkd4931MB2JgTv7ki6cz/kf%2BjCgDqkM4CX7ddAbh5Aid%2B8w4UyH77AoC6pLPB12xZAG525sRv3pFQ7lsWAOxD%2Bu7n87YtADc7cuI3d2FR5lsUAOxN%2Bu7ncyoAG3Hqd3dlUua3LADoR/r%2B5/e2LgA3u3Dqd5/GgLyXLwA4h/T9z8e2LwA3d%2BfU78ZPXth5mQIA3Ejf//zaIwrAzV059bvxOv%2Bz7yUFAHiF9P3P%2ByoAhTn52wH0Iv0G8G%2BPKQA3d%2BL07wfQj/QbwN89qgDc3IHTvx9AX9JvAH96XAG4WZnTvx9Af9JvAP/1yAJwsyKnfz%2BAc0i/AVQAymAGAE4j/Q6c7rEF4GYVzAHAqaTvv5M9ugDcTJP%2B/ipzAHAu6fvvVI8vADeFPjsHAEjffyeqAPyPwp6bBQDcSN99p6kA/KKQr58FAPxK%2Bu47SQXgD4V73SwA4B7pu%2B8UFYA/FOq1MwGAe6TvvRNUAO4ozGtmAgCPSN973VUAvlCI584EAJ4hfe91VgF4oPDOmwsAPEv6zuuqAvCNQjt%2BLgDwKuk7r6P/3Ej/iOoK69jZAMA7pO%2B7Tv7zg/QP2UEhHTMbAPiE9H3XRQXgRYXz8/kAwKek77oOKgBvKJTvzwcARpG%2B63ZXAXhTYXxvRgAwkvQ9t7MKwAcK4etzAoDRpO%2B4XVUAPlT4np8TAMwifcftqALApQLAaNL32q4qAIwIACNI32U7qwAwKgC8S/r%2B2l0FgCUEgFdI31kdVABYSgD4jvQ91UUFgCUFgHuk76ZO/vMr6R9D/ikA/CB9H3Xynz9J/yDyKwGcTfoO6qYCwO0EcB7pe6ejCgC3FcAZpO%2BarioA3F4AfUnfL539qwAoAdxZAD1I3yXdvfv4KwDcWWAVMjeP9D1yggoAWwnMRvbmk75HTlEBYCuBWcjeGtJ3yEl%2BWQCUAO4oMBLZW0v6/jjJh4%2B/AsDdBEYggxnS98dpKgBsJfAuMpgjfW%2Bc6rcFQAngLgKvIot50vfGqT71%2BCsA3EXgO2SxFuk742QVALYR%2BAqZrEn6zjjdpwuAEsDqAj9IZ1EmH5PeC198/BUAVhfnks6eTD5Peif8VwWAbcQ5pLMmm%2B%2BT3gV/%2BnIBUAJYVfQjnSnZHEd6B/zdtx5/BYAVxd6k8yOjc0nPnn/7dgFQAlhN1CWdjSqeSnru/NuPHn8FgNXEeNI77eZppOfNr1UA2EbMIb3Xjp5Ces587McFQAlgFTGH9F472p30fPm9Qx5/BYAVxDzSu%2B1qV9Jz5XMOKwBKANNiHunddrUb6XnyeYc%2B/goA02Ie6d12tRPpWfI1hxcAJYApMZf0fju7O%2Bn58XWnPP5KAFNiLun9dnZn0rPj6059/BUArhbzSe%2B4u7uRnhffd3oBUAK4UswnvePu7kJ6TvzMJY%2B/AsBVYg3pPZ9gddLz4ecuKwBKAFeINaT3fIJVSc%2BFY1z6%2BCsBXCHWkN7zCVYjPQ%2BOM/L4KwCcKdaR3vUpViE9B441VgCUAM4S60jv%2BhTTpL%2Bf440%2B/j9ID4G9xFrS%2Bz5J%2B%2BUo0%2B/%2Bf0kPgr3EWtL7Pkl75SjT7/5vpIfBPmIt6X2fpH1yhOn3/i7poXB/sZ70zk/THvmJ6Xf%2BIenhcG%2BxnvTOT9P%2B%2BK7p9/0p0kPiniJDeu8nam981fS7/hLpYXE/kSG99xO1L75i%2Bj1/mfTAuJfIkd79qdoTnzX9nr9FemjcR%2BRI7/5U7YfPmH7HPyI9PO4hcqR3f6r2wu9Mv99DSA%2BRtUWW9P5P1j74lel3eyjpYbKuyJLe/8naAe%2BZfq%2BnkB4qa4os6f2T/Gn6nZ5KerisKzKk907yX9Pv8zLSg2ZtsY70rsnTTb/HEdJD5x5iLun9kiebfoejpIfPfcQc0nslTzX9/pYgvQTuJ8aR3iV5oul3txTpZXBf8Rnp/ZGnmX5vy5JeDPcWr5PeGXmK6fd1C9JLYg/xHOk9kSeYfle3I70w9hL3Se%2BF7Gz6Hd2a9PLYU/wkvQuyq%2Bn3sw3pRbK3J5OePdnN9HvZlvRieYYnkZ412cX0%2B3gE6SXzTLuSnivZwfS7eBzphfNsu5CeI7mz6XfweNIBIH91N9LzInc0/e7hDulQkF9ZlfRcyF1Mv294knRQyFdUAMi6pt8zfEA6POQoFQByjel3CxNIh4okWdP0%2B4SFpMNGksyafodQhHQQSZJzTb8z2Ih0WEmS75l%2BP3Ag6dCTZDfT93pH/i%2BDby1igBO3hwAAAABJRU5ErkJggg%3D%3D%22%2C%20%22sizes%22%3A%20%22512x512%22%2C%20%22type%22%3A%20%22image/png%22%2C%20%22purpose%22%3A%20%22any%20maskable%22%7D%5D%7D">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAHuElEQVR4nO2cS44bWQwE+xhzVp/Oy7lVGbUQILR+VaVHRpLMALiVH5kZMOQ2+ucH5u+f/zbP3KH7lwJ9ZE/NoXt7GfpwleY39HuUh+71R+gDVZxvoN9ODd3zB+iDVJ7V0PtkDt17F3/BREPvlzEuf+HJht43alz+okNC7756XPyCowJ9h5Xj8hcaNeh7rBqX/03R6Le8epcC9D1Wjsv/omD0mz69j4S+x+oZK0CVoJWgbxEx48pfLWwl6FtEzYjyVw1cBfoO0ePyi4auAn2HjGknQIfQVaDvkDFtyt8peAXoG2ROeQG6ha8AfYPMKVv+rgWgoXMlppwA1UpQCTpbGQHoR5FlUn9fJHS+MhLQD6KLpfquSOiMLYBQydTekwGdswUQK5vKOzKgc6bH5R8OnbXCSAlgGOjcLYDLLwHdgZECGD3oUo4RwGhDl9MCGAmy+zBGAEtQh+wepApAld8S1CMr/8z+4QJYglpk5T5KAEtQj4y8RwlgCeqRkfMoASxBPTLyHSWAJahJdK6jBLAENYnOc5QAXSR4stP/n6byHSJzHCdAh/BXCFDtLpHvHCeActgXd1kigPqNIt80TgClgBfsESKA4q0iGSWAAgt3CRdA6W5RjBGAJmCfNAFUbhhFewGqH1dFAIV7RtFWgKoHVRaAvm0ELQWoeMhKAnQTwQKAB6wsQBcJWglQ5XBdBOgiQgsBKhysqwBTJZARQP1QEwSoLoEFCDjQNAGqi1BSAMXDTBegqgTlBFA8igWYI0F7Aej9qgtQUYIyAigdwgLMlKDtb4WjC9NNgGoSjBaALkpXATpK0O4X49IF6S5AJQksgOBsFiCNZQKc/VCXv7cA6hKc2eO0AFf+kIzD0YWYJoCiBFd2+CjAyj9YaXEL0EOCb9+/RICjj4mCLoEFyGfV+5cK8O6BUdAFmC5ApgQRb38rwMpHR0AHbwFyJIh8d7gAkdChW4D4rkS/u6wAdOAWIKcvmADq0GFbAAuAQQdtAfpIYAEsgAWoJAAdsAXIlyBdAGXocC1AvgCRuZcSgA7WAnASWIDNAlSaKtmXEYAO1AL0lOBBAFXoMC2ABUChw7QAFgCDDtICaEhgARrMZgGkumABLIAFUC7/Dh2iBbAAGHSAQQK8o5UAq3tlAYqOd9fsgwUQLwD9dnr/6JtYgALh0zso3CDqHhagSPD0Lip3WH0LaQHo4JRC9z1i7mABxMP2TWJvYAGEg/Zd4ve3AMJB+y7x+0sLsB34qangZEDviN4lRABR6NAUy3+D3tUCJECHZgEEb2MBdCcTelcLkAAdmgWoeZtDPHwJVvu2v/GhKYdM76p8m0NYgNoh07sq3+YQFqB2yPSuyrc5hAWoGzS9o+pdDvPwJVhRgNVvy5gM6B1V73IGC1A4aHpH1bucwQIUDZveTfEmV7AABQOnd1K7xzeUEOD+oRXHd9As/44FKBQ+vYPCDVZjAYoUgH47vX8UYQKsXpgOj7wJ/WbFPqzCAnBl+PRDIf9muATKCHD/2A6zHfipKf1G5S6swgJYgLEC3L/PAlgAC6C+OB2iBdDowSrKCfD70ZVnGySAKhbAAlgAC2ABJgrw+41hAliC2QKoYgH4YlgAkNICPFug2mwDBFAmVYCIY9DhWoC6Ajx7azkBXi1SZbbmAihjAQRmswAYiACWYI4A6lgAgdksAMKrN5cV4N1SyrM1FUAdTABiKeXZLMDpfFd+VpoAWdDBW4C8v+FXfU6YABR0ASYLQGW66rOWCEBDl8ACcJl++1mXBVCDLsJEAdSyvPJZpwVQhi7EJAGUczzzWYcFqAJdjAkCdMrPAlgAC0AvvRq6IJ0F6Jbbqe8AlaCL0lGAjpm1FWCHLkwnAbpm1epfgZ5BF6eDAJ0zai/ADl2gygJ0z+fSD8IqQhepogATchkjwA597EoCTMmjzX+FOIMF0MiVLv9YAXYsgMv/lQCWoJcA3e8eIkAHCXYmC9D51hbgBBMF6HznNAE6SbAzQQAKuuwW4AQdBSChix4qAH3cSDoIQEOXPEUAhUNHUlEABeiCW4DFVBBABbrc6QJEHl8p2BtKAqhCFzxdgIgwKgS9kylAJeiSpwuwMqBu4W8XBOgAXfSSAmQIZvKgy54qwLclzZLM5EIXPlWAqyXNFM3kQ5c+VYCzBc0UzXDQxU8V4GhBM0UzPHT5UwX4VNBs2YwGuAA7tATZshkt0PLTAhDCGT3GCHBfSko6o8kYAagx2lgAizAWogdjBbAIOpD5jxfAIrDQuf/cQz9GYUwedNY/v6EfpDDdUdmVztkCDCq/2s50zhZAqAxRqO5MZ/xWgMkSVEd9dzrfQ+W3ADWotjud7SkBpkpA03V3Otdn87b8EwVQoNsN6H3ezUcBpkmgQKcb0Lu8m0PlnySACvQdVtyCfv+ROSzAFAlUoO/wzS3odx+dU+WfIoEK9B2u3oJ+89G5VP7uEihB3+LsTeh3npmvym8BcqBvcfQm9PuuzNcCdJRADfoen25Dv+nqLCl/RwnUoO/x6jb0W76ZpeXvJoEa9D26TUj5LUIc9B26THjxO0pwGwtQe1LL31WC21iAWoOUf4IIt7EAmkP3/gH6IFljAdihe/4R+kDEWID4oXt9GfpwamMBjg3d2xToI3tml/wfVvSU7AEYgXAAAAAASUVORK5CYII=">
+  <title>ZaagPlan</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;background:#F4F1EC;overscroll-behavior:none;-webkit-tap-highlight-color:transparent}
+    #root{min-height:100%}
+    #splash{display:flex;flex-direction:column;align-items:center;justify-content:center;
+             height:100vh;font-family:sans-serif;color:#C07A18;gap:14px}
+    #splash .icon{font-size:56px}
+    #splash .naam{font-size:22px;font-weight:700;letter-spacing:3px}
+    #splash .sub {font-size:12px;color:#B0A99E;letter-spacing:1px}
+    @keyframes slideUp{from{transform:translateY(110%)}to{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="splash">
+      <div class="icon">🪚</div>
+      <div class="naam">ZAAGPLAN</div>
+      <div class="sub">laden…</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+
+  <script type="text/babel"
+    data-presets="react"
+    data-plugins="transform-optional-chaining,transform-nullish-coalescing-operator">
+// ZaagPlan PWA
+const _cw=console.warn.bind(console);
+console.warn=(...a)=>{if(a[0]&&String(a[0]).includes("Babel"))return;_cw(...a)};
+
+const { useState, useRef, useEffect } = React;
+
+
+const uid = () => Math.random().toString(36).slice(2, 8);
+function useMob() {
+  const [m, setM] = useState(() => window.innerWidth < 640);
+  useEffect(() => {
+    let t;
+    const fn = () => { clearTimeout(t); t = setTimeout(() => setM(window.innerWidth < 640), 150); };
+    window.addEventListener('resize', fn);
+    return () => window.removeEventListener('resize', fn);
+  }, []);
+  return m;
+}
+
+const COLORS = [
+  "#E07B4F","#2AA89E","#C9A820","#3DAA6A","#D95F5F",
+  "#3A8FC4","#9B6BBD","#D4854A","#3AAA78","#4A9FD4",
+  "#C49B35","#A07ABD","#4AAA78","#C48A35","#D45F5F"
+];
+
+
+/* ─── QUICK INPUT HELPERS ───────────────────────── */
+function Stepper({ value, onChange, min = 1, max = 999 }) {
+  const m = useMob();
+  const btnStyle = {
+    width: m ? 38 : 28, height: m ? 46 : 34, background: C.accentBg,
+    border: `1px solid ${C.border}`, borderRadius: 6, cursor: "pointer",
+    fontSize: m ? 18 : 14, fontWeight: 700, color: C.accent,
+    display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+  };
+  return (
+    <div style={{ display: "flex", gap: 2, alignItems: "center" }}>
+      <button style={btnStyle} onClick={() => onChange(Math.max(min, value - 1))}>−</button>
+      <input type="number" style={{ ...si(m), width: m ? 56 : 46, textAlign: "center", padding: "4px" }}
+        value={value} min={min} max={max} onChange={e => onChange(Math.max(min, +e.target.value))} />
+      <button style={btnStyle} onClick={() => onChange(Math.min(max, value + 1))}>+</button>
+    </div>
+  );
+}
+
+// Parse sneltekst: "45x70 800x5 1200x3" or "800 5\n1200 3" or Excel paste
+function parseSneltekst(text, kopmaten) {
+  const lines = text.split(/[\n;]/).map(s => s.trim()).filter(Boolean);
+  const items = [];
+  for (const line of lines) {
+    // Tab-separated (Excel): kopmaat\tlengte\taantal or lengte\taantal
+    const parts = line.split(/\t|,/).map(s => s.trim());
+    if (parts.length >= 2) {
+      const isKm = (s) => /^\d+[x×]\d+$/.test(s.trim());
+      if (parts.length >= 3 && isKm(parts[0])) {
+        // kopmaat, lengte, aantal
+        items.push({ kopmaat: parts[0].trim(), lengte: parseInt(parts[1]), aantal: parseInt(parts[2]) || 1 });
+        continue;
+      }
+      if (parts.length >= 2 && !isNaN(+parts[0]) && !isNaN(+parts[1])) {
+        // lengte, aantal
+        items.push({ kopmaat: "", lengte: parseInt(parts[0]), aantal: parseInt(parts[1]) || 1 });
+        continue;
+      }
+    }
+    // Space-separated tokens: optionally starts with kopmaat
+    const tokens = line.split(/\s+/);
+    let ki = 0;
+    let km = "";
+    if (tokens[ki] && /^\d+[x×]\d+$/.test(tokens[ki])) { km = tokens[ki++]; }
+    // remaining: lengte x antal pairs like 800x5 or just 800
+    while (ki < tokens.length) {
+      const tok = tokens[ki++];
+      const mLx = tok.match(/^(\d+)[x×](\d+)$/);
+      if (mLx) {
+        items.push({ kopmaat: km, lengte: parseInt(mLx[1]), aantal: parseInt(mLx[2]) });
+      } else if (/^\d+$/.test(tok)) {
+        const len = parseInt(tok);
+        // next token could be aantal
+        let aantal = 1;
+        if (tokens[ki] && /^\d+$/.test(tokens[ki]) && parseInt(tokens[ki]) < 100) {
+          aantal = parseInt(tokens[ki++]);
+        }
+        items.push({ kopmaat: km, lengte: len, aantal });
+      }
+    }
+  }
+  return items.filter(it => it.lengte > 0);
+}
+
+function QuickInput({ mode, kopmaten, onAdd, placeholder }) {
+  const m = useMob();
+  const [open, setOpen] = useState(false);
+  const [text, setText] = useState("");
+  const [parsed, setParsed] = useState([]);
+
+  const parse = (t) => {
+    setText(t);
+    const items = parseSneltekst(t, kopmaten);
+    setParsed(items);
+  };
+
+  const confirm = () => {
+    onAdd(parsed);
+    setText(""); setParsed([]); setOpen(false);
+  };
+
+  return (
+    <>
+      <button onClick={() => setOpen(o => !o)} style={{ ...sd(m), display: "flex", alignItems: "center", gap: 5 }}>
+        ⚡ Sneltekst
+      </button>
+      {open && (
+        <div style={{ gridColumn: "1 / -1", background: C.accentBg, border: `1px solid #EDD9B0`, borderRadius: 10, padding: 14, marginTop: 4 }}>
+          <div style={{ fontSize: 12, color: C.muted, marginBottom: 8, lineHeight: 1.7 }}>
+            Typ of plak je lijst. Formaten:
+            <span style={{ fontFamily: "monospace", marginLeft: 6 }}>45x70 800x5 1200x3</span> of
+            <span style={{ fontFamily: "monospace", marginLeft: 6 }}>800⇥5</span> (Excel-kolommen) of
+            <span style={{ fontFamily: "monospace", marginLeft: 6 }}>800,3</span> (komma)
+          </div>
+          <textarea
+            style={{ ...si(m), height: 90, resize: "vertical", fontFamily: "monospace", marginBottom: 8 }}
+            placeholder={placeholder}
+            value={text}
+            onChange={e => parse(e.target.value)}
+          />
+          {parsed.length > 0 && (
+            <div style={{ marginBottom: 10 }}>
+              <div style={{ fontSize: 11, color: C.green, fontWeight: 700, marginBottom: 5 }}>✓ {parsed.length} regels herkend:</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
+                {parsed.map((it, i) => (
+                  <div key={i} style={{ fontSize: 11, fontFamily: "monospace", background: C.greenBg, border: "1px solid #B0D9C0", borderRadius: 5, padding: "3px 8px", color: C.green }}>
+                    {mode === "plaat"
+                      ? `${it.label||"?"} ${it.breedte}×${it.hoogte}mm ×${it.aantal}`
+                      : `${it.kopmaat||"—"} ${it.lengte}mm ×${it.aantal}`}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div style={{ display: "flex", gap: 8 }}>
+            <button onClick={confirm} disabled={!parsed.length}
+              style={{ ...sb(C.accent, "#fff", m), opacity: parsed.length ? 1 : 0.4 }}>
+              + Toevoegen aan lijst
+            </button>
+            <button onClick={() => { setText(""); setParsed([]); setOpen(false); }} style={sd(m)}>Annuleer</button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+/* ─── ALGORITHMS ───────────────────────────────── */
+function cut1D(items, stockLen, kerf, kopVerlies = 0) {
+  const all = [];
+  items.forEach(it => { for (let i = 0; i < it.aantal; i++) all.push({ len: +it.lengte, id: it.id }); });
+  all.sort((a, b) => b.len - a.len);
+  const bins = [], errs = [];
+  const effectiveLen = stockLen - kopVerlies; // eerste stukje is afval
+  for (const p of all) {
+    if (p.len > effectiveLen) { errs.push(`${p.len}mm past niet in ${stockLen}mm (na ${kopVerlies}mm kopverlies: ${effectiveLen}mm beschikbaar)`); continue; }
+    let placed = false;
+    for (const b of bins) {
+      const need = p.len + (b.cuts.length ? kerf : 0);
+      if (b.rem >= need) { b.rem -= need; b.cuts.push(p); placed = true; break; }
+    }
+    if (!placed) bins.push({ stockLen, kopVerlies, cuts: [p], rem: effectiveLen - p.len });
+  }
+  return { bins, errs };
+}
+
+function cut2D(items, sw, sh, kerf) {
+  const all = [];
+  items.forEach(it => { for (let i = 0; i < it.aantal; i++) all.push({ w: +it.breedte, h: +it.hoogte, label: it.label || `${it.breedte}x${it.hoogte}` }); });
+  all.sort((a, b) => b.w * b.h - a.w * a.h);
+  const sheets = [], errs = [];
+  for (const p of all) {
+    const ok = p.w <= sw && p.h <= sh, okr = p.h <= sw && p.w <= sh;
+    if (!ok && !okr) { errs.push(`"${p.label}" past niet op plaat`); continue; }
+    let placed = false;
+    for (const s of sheets) { if (guill(s, p, kerf)) { placed = true; break; } }
+    if (!placed) { const s = { w: sw, h: sh, cuts: [], spaces: [{ x: 0, y: 0, w: sw, h: sh }] }; sheets.push(s); guill(s, p, kerf); }
+  }
+  return { sheets, errs };
+}
+
+function guill(sheet, p, kerf) {
+  for (let i = 0; i < sheet.spaces.length; i++) {
+    const sp = sheet.spaces[i];
+    let fw, fh, rot = false;
+    if (p.w <= sp.w && p.h <= sp.h)      { fw = p.w; fh = p.h; }
+    else if (p.h <= sp.w && p.w <= sp.h) { fw = p.h; fh = p.w; rot = true; }
+    else continue;
+    sheet.cuts.push({ x: sp.x, y: sp.y, w: fw, h: fh, label: p.label + (rot ? " ↻" : "") });
+    const ns = [];
+    if (sp.w - fw - kerf > 0 && fh > 0) ns.push({ x: sp.x + fw + kerf, y: sp.y, w: sp.w - fw - kerf, h: fh });
+    if (sp.h - fh - kerf > 0)           ns.push({ x: sp.x, y: sp.y + fh + kerf, w: sp.w, h: sp.h - fh - kerf });
+    sheet.spaces.splice(i, 1, ...ns);
+    return true;
+  }
+  return false;
+}
+
+function parseKm(s) {
+  const p = String(s).replace(/[x×\s]/gi, "x").split("x").map(Number);
+  return p.length === 2 && !isNaN(p[0]) && !isNaN(p[1]) && p[0] > 0 && p[1] > 0 ? p : null;
+}
+
+function matchKm(str, kopmaten) {
+  const gw = parseKm(str);
+  if (!gw) return null;
+  const [gA, gB] = [Math.min(...gw), Math.max(...gw)];
+  let best = null, bestA = Infinity;
+  for (const k of kopmaten) {
+    const kp = parseKm(k.kopmaat);
+    if (!kp) continue;
+    const [kA, kB] = [Math.min(...kp), Math.max(...kp)];
+    if (kA >= gA && kB >= gB && kA * kB < bestA) { bestA = kA * kB; best = k; }
+  }
+  return best;
+}
+
+/* ─── THEME ────────────────────────────────────── */
+const C = {
+  bg: "#F4F1EC", surface: "#FFFFFF", border: "#DDD9D2",
+  text: "#1E1A15", muted: "#7A7468", faint: "#B0A99E",
+  accent: "#C07A18", accentBg: "#FDF3E3",
+  red: "#C0392B", redBg: "#FDF0EE",
+  green: "#2E7D52", greenBg: "#EEF7F2",
+  header: "#FFFEFA", inpBg: "#F9F6F2",
+};
+
+/* ─── STYLE HELPERS ────────────────────────────── */
+const si = (m) => ({
+  background: C.inpBg, border: `1px solid ${C.border}`, color: C.text,
+  padding: m ? "11px 12px" : "8px 10px", borderRadius: 7,
+  fontFamily: "'Roboto Mono', monospace",
+  fontSize: m ? 16 : 13, outline: "none", width: "100%",
+  minHeight: m ? 46 : 34,
+});
+const ss = (m) => ({ ...si(m), fontFamily: "'Rajdhani', sans-serif" });
+const sb = (bg, fg, m, ex = {}) => ({
+  padding: m ? "12px 18px" : "8px 16px", minHeight: m ? 46 : 34,
+  background: bg, color: fg, border: "none", borderRadius: 7,
+  cursor: "pointer", fontFamily: "'Rajdhani', sans-serif",
+  fontSize: m ? 16 : 14, fontWeight: 700, letterSpacing: 0.5,
+  transition: "opacity 0.15s", whiteSpace: "nowrap", ...ex,
+});
+const sd = (m) => ({
+  padding: m ? "11px 16px" : "7px 14px", minHeight: m ? 46 : 34,
+  background: "transparent", color: C.accent, border: `1px dashed ${C.accent}`,
+  borderRadius: 7, cursor: "pointer", fontFamily: "'Rajdhani', sans-serif",
+  fontSize: m ? 16 : 14, fontWeight: 600,
+});
+const sx = (m) => ({
+  padding: m ? "10px 14px" : "5px 9px", minHeight: m ? 44 : 30,
+  background: "transparent", color: C.red, border: `1px solid ${C.red}`,
+  borderRadius: 6, cursor: "pointer", fontSize: m ? 14 : 12, fontWeight: 700,
+});
+
+/* ─── SHARED COMPONENTS ─────────────────────────── */
+function Card({ title, children }) {
+  return (
+    <div style={{ marginBottom: 14, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, boxShadow: "0 1px 4px rgba(0,0,0,.06)" }}>
+      {title && (
+        <div style={{ padding: "11px 16px", borderBottom: `1px solid ${C.border}`, background: "#FDFAF6", borderRadius: "12px 12px 0 0" }}>
+          <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: C.muted }}>{title}</span>
+        </div>
+      )}
+      <div style={{ padding: 16 }}>{children}</div>
+    </div>
+  );
+}
+
+function Lbl({ children }) {
+  return <div style={{ fontSize: 10, color: C.faint, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4, fontWeight: 600 }}>{children}</div>;
+}
+
+function MobLbl({ children }) {
+  return <div style={{ fontSize: 11, color: C.faint, letterSpacing: 1, textTransform: "uppercase", marginBottom: 5, fontWeight: 600 }}>{children}</div>;
+}
+
+function MobField({ label, children }) {
+  return <div style={{ marginBottom: 10 }}><MobLbl>{label}</MobLbl>{children}</div>;
+}
+
+function Warn({ msg }) {
+  return <div style={{ padding: "10px 14px", background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 8, fontSize: 14, color: C.accent, marginBottom: 14 }}>⚠ {msg}</div>;
+}
+
+function Err({ msg }) {
+  return <div style={{ padding: "8px 12px", background: C.redBg, border: "1px solid #E8C0BB", borderRadius: 6, fontSize: 13, color: C.red, marginBottom: 6 }}>⚠ {msg}</div>;
+}
+
+/* ─── CUT BAR ──────────────────────────────────── */
+function CutBar({ bin, colorById, kerf }) {
+  const VW = 560, VH = 44;
+  const sc = VW / bin.stockLen;
+  const kv = (bin.kopVerlies || 0) * sc; // kopverlies offset
+  let cx = kv;
+  const segs = bin.cuts.map((c, i) => {
+    const kw = i ? kerf * sc : 0, x = cx + kw, w = c.len * sc;
+    cx = x + w;
+    return { x, w, color: colorById[c.id] || "#999", label: String(c.len) };
+  });
+  const wx = cx, ww = VW - cx;
+  return (
+    <svg viewBox={`0 0 ${VW} ${VH}`} style={{ width: "100%", borderRadius: 6, display: "block", border: `1px solid ${C.border}` }}>
+      <defs><pattern id="htch" patternUnits="userSpaceOnUse" width={6} height={6} patternTransform="rotate(45)"><line y2={6} stroke="#D8D4CE" strokeWidth={3} /></pattern></defs>
+      <rect width={VW} height={VH} fill={C.inpBg} rx={5} />
+      {/* kopverlies */}
+      {kv > 0 && <>
+        <rect x={0} y={3} width={kv - 0.5} height={VH - 6} fill={C.redBg} stroke={C.red} strokeWidth={0.5} rx={2} opacity={0.7} />
+        {kv > 24 && <text x={kv / 2} y={VH / 2 + 4} textAnchor="middle" fontSize={9} fill={C.red} fontFamily="monospace">{bin.kopVerlies}mm</text>}
+      </>}
+      {segs.map((s, i) => (
+        <g key={i}>
+          <rect x={s.x} y={3} width={Math.max(s.w - 0.5, 0)} height={VH - 6} fill={s.color} rx={2} opacity={0.85} />
+          {s.w > 28 && <text x={s.x + s.w / 2} y={VH / 2 + 4} textAnchor="middle" fontSize={10} fill="rgba(255,255,255,.95)" fontFamily="monospace" fontWeight="700">{s.label}</text>}
+        </g>
+      ))}
+      {ww > 2 && <>
+        <rect x={wx} y={3} width={ww} height={VH - 6} fill="url(#htch)" rx={2} />
+        {ww > 36 && <text x={wx + ww / 2} y={VH / 2 + 4} textAnchor="middle" fontSize={9} fill={C.faint} fontFamily="monospace">{bin.rem}mm</text>}
+      </>}
+    </svg>
+  );
+}
+
+/* ─── SHEET VIS ─────────────────────────────────── */
+function SheetVis({ sheet, idx }) {
+  const MW = 480, MH = 270;
+  const sc = Math.min(MW / sheet.w, MH / sheet.h);
+  const W = sheet.w * sc, H = sheet.h * sc;
+  const used = sheet.cuts.reduce((s, c) => s + c.w * c.h, 0);
+  const waste = ((1 - used / (sheet.w * sheet.h)) * 100).toFixed(1);
+  return (
+    <div style={{ marginBottom: 20 }}>
+      <div style={{ fontSize: 12, color: C.muted, marginBottom: 6, fontFamily: "monospace" }}>Plaat #{idx + 1} — {sheet.w}x{sheet.h}mm — Afval: {waste}%</div>
+      <svg width={W} height={H} style={{ display: "block", borderRadius: 8, border: `1px solid ${C.border}`, maxWidth: "100%" }}>
+        <defs><pattern id={`h2-${idx}`} patternUnits="userSpaceOnUse" width={8} height={8} patternTransform="rotate(45)"><line y2={8} stroke="#D8D4CE" strokeWidth={3} /></pattern></defs>
+        <rect width={W} height={H} fill={C.inpBg} />
+        <rect width={W} height={H} fill={`url(#h2-${idx})`} opacity={0.5} />
+        {sheet.cuts.map((c, i) => (
+          <g key={i}>
+            <rect x={c.x * sc} y={c.y * sc} width={c.w * sc - 0.5} height={c.h * sc - 0.5} fill={COLORS[i % COLORS.length]} stroke="#fff" strokeWidth={1} rx={2} opacity={0.88} />
+            {c.w * sc > 36 && c.h * sc > 18 && <text x={(c.x + c.w / 2) * sc} y={(c.y + c.h / 2) * sc + 4} textAnchor="middle" fontSize={9} fill="rgba(255,255,255,.95)" fontFamily="monospace" fontWeight="600">{c.label}</text>}
+          </g>
+        ))}
+      </svg>
+    </div>
+  );
+}
+
+/* ─── STATS ─────────────────────────────────────── */
+function Stats({ items }) {
+  return (
+    <div className="stats-grid" style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 18 }}>
+      {items.map(([l, v]) => (
+        <div key={l} style={{ background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 8, padding: "11px 14px", flex: "1 1 120px" }}>
+          <div style={{ fontSize: 10, color: C.muted, letterSpacing: 1.2, textTransform: "uppercase", marginBottom: 4 }}>{l}</div>
+          <div style={{ fontSize: 20, fontWeight: 700, fontFamily: "'Roboto Mono', monospace", color: C.accent }}>{v}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/* ─── RESULTS 1D ────────────────────────────────── */
+function Results1D({ results, colorById, allItems, kerf }) {
+  if (!results) return null;
+  // Only show errors if all results have no bins
+  const allEmpty = results.every(r => !r.bins.length);
+  if (allEmpty) {
+    return (
+      <Card title="Zaagplan Resultaten">
+        {results.flatMap(r => r.errs || []).map((e, i) => <Err key={i} msg={e} />)}
+      </Card>
+    );
+  }
+  const totalBins  = results.reduce((s, r) => s + r.bins.length, 0);
+  const totalWaste = results.reduce((s, r) => r.bins.reduce((ss, b) => ss + b.rem, 0) + s, 0);
+  const totalLen   = results.reduce((s, r) => r.bins.reduce((ss, b) => ss + b.stockLen, 0) + s, 0);
+  return (
+    <Card title="Zaagplan Resultaten">
+      <Stats items={[
+        ["Stukken hout", totalBins],
+        ["Totaal afval", `${totalWaste}mm`],
+        ["Benutting", `${((1 - totalWaste / totalLen) * 100).toFixed(1)}%`],
+        ["Zaagblad", `${kerf}mm`],
+      ]} />
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 18 }}>
+        {allItems.filter(it => it.lengte && it.aantal).map(it => (
+          <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 6, background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 6, padding: "5px 10px" }}>
+            <div style={{ width: 10, height: 10, borderRadius: 2, background: colorById[it.id], flexShrink: 0 }} />
+            <span style={{ fontSize: 13, color: C.muted, fontFamily: "monospace" }}>{it.lengte}mm ×{it.aantal}</span>
+          </div>
+        ))}
+      </div>
+      {results.map((res, ri) => (
+        <div key={ri} style={{ marginBottom: 26 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10, flexWrap: "wrap" }}>
+            <div style={{ height: 3, width: 18, background: C.accent, borderRadius: 2 }} />
+            <span style={{ fontSize: 16, fontWeight: 700, color: C.accent }}>{res.kopmaat} — {res.stockLen}mm</span>
+            <span style={{ fontSize: 13, color: C.muted, background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 5, padding: "2px 8px", fontFamily: "monospace" }}>{res.bins.length} stuk{res.bins.length !== 1 ? "s" : ""}</span>
+          </div>
+          {(res.errs || []).map((e, i) => <Err key={i} msg={e} />)}
+          {res.bins.map((bin, bi) => (
+            <div key={bi} style={{ marginBottom: 14 }}>
+              <div style={{ fontSize: 11, color: C.faint, marginBottom: 5, fontFamily: "monospace" }}>
+                Stuk #{bi + 1} · Afval: {bin.rem}mm ({(bin.rem / bin.stockLen * 100).toFixed(1)}%) · {bin.cuts.map(c => c.len + "mm").join(" + ")}
+              </div>
+              <CutBar bin={bin} colorById={colorById} kerf={kerf} />
+            </div>
+          ))}
+        </div>
+      ))}
+    </Card>
+  );
+}
+
+/* ─── FOTO SCAN ─────────────────────────────────── */
+function FotoScan({ mode, kopmaten, onResult }) {
+  const m = useMob();
+  const [open, setOpen]       = useState(false);
+  const [screen, setScreen]   = useState("keuze"); // keuze | camera | preview | laden | resultaat
+  const [imgB64, setImgB64]   = useState(null);
+  const [imgUrl, setImgUrl]   = useState(null);
+  const [preview, setPreview] = useState(null);
+  const [err, setErr]         = useState(null);
+
+  const fileRef   = useRef();
+  const videoRef  = useRef();
+  const streamRef = useRef();
+  const canvasRef = useRef();
+
+  const reset = () => {
+    stopCam();
+    setScreen("keuze"); setImgB64(null); setImgUrl(null); setPreview(null); setErr(null);
+  };
+  const close = () => { reset(); setOpen(false); };
+
+  const stopCam = () => {
+    if (streamRef.current) { streamRef.current.getTracks().forEach(t => t.stop()); streamRef.current = null; }
+  };
+
+  // Start camera
+  const startCamera = async () => {
+    setErr(null); setScreen("camera");
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" }, audio: false });
+      streamRef.current = stream;
+      if (videoRef.current) { videoRef.current.srcObject = stream; videoRef.current.play(); }
+    } catch (e) {
+      setErr("Camera niet beschikbaar: " + e.message);
+      setScreen("keuze");
+    }
+  };
+
+  // Snap photo from video
+  const snapPhoto = () => {
+    const video = videoRef.current;
+    const canvas = canvasRef.current;
+    if (!video || !canvas) return;
+    canvas.width  = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext("2d").drawImage(video, 0, 0);
+    const dataUrl = canvas.toDataURL("image/jpeg", 0.9);
+    const b64 = dataUrl.split(",")[1];
+    stopCam();
+    setImgUrl(dataUrl); setImgB64(b64); setScreen("preview");
+  };
+
+  // Load from file
+  const onFile = (e) => {
+    const file = e.target.files[0]; if (!file) return;
+    setErr(null);
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      const dataUrl = ev.target.result;
+      setImgUrl(dataUrl); setImgB64(dataUrl.split(",")[1]); setScreen("preview");
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Analyse with Claude
+  const analyse = async () => {
+    if (!imgB64) return;
+    setScreen("laden"); setErr(null);
+    const kmLijst = kopmaten.filter(k => k.kopmaat).map(k => k.kopmaat).join(", ") || "geen";
+    const prompts = {
+      kortlijst: `Analyseer deze afbeelding en extraheer ALLE houtdelen. Beschikbare kopmaten: ${kmLijst}. Antwoord ALLEEN als JSON-array zonder uitleg of markdown:\n[{"kopmaat":"45x70","lengte":1200,"aantal":2},...]`,
+      latten:    `Analyseer deze afbeelding en extraheer ALLE latten. Beschikbare kopmaten: ${kmLijst}. Antwoord ALLEEN als JSON-array zonder uitleg of markdown:\n[{"gewensteMaat":"40x60","lengte":800,"aantal":1},...]`,
+      plaat:     `Analyseer deze afbeelding en extraheer ALLE plaatdelen. Antwoord ALLEEN als JSON-array zonder uitleg of markdown:\n[{"label":"Zijwand","breedte":400,"hoogte":600,"aantal":2},...]`,
+    };
+    try {
+      const resp = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 1000,
+          messages: [{ role: "user", content: [
+            { type: "image", source: { type: "base64", media_type: "image/jpeg", data: imgB64 } },
+            { type: "text", text: prompts[mode] }
+          ]}]
+        })
+      });
+      const data = await resp.json();
+      const text = (data.content?.find(b => b.type === "text")?.text || "").replace(/```json|```/gi, "").trim();
+      const parsed = JSON.parse(text);
+      if (!Array.isArray(parsed) || !parsed.length) throw new Error("Geen items gevonden.");
+      setPreview(parsed); setScreen("resultaat");
+    } catch (e) {
+      setErr("Kon afbeelding niet verwerken: " + e.message);
+      setScreen("preview");
+    }
+  };
+
+  const confirm = () => {
+    onResult(preview); close();
+  };
+
+  const labelMap = { kortlijst: "Kortlijst", latten: "Latten", plaat: "Plaatmateriaal" };
+  const btnBase = { display: "flex", alignItems: "center", justifyContent: "center", gap: 6 };
+
+  return (
+    <>
+      <button onClick={() => { setOpen(true); reset(); }} style={{ ...sd(m), ...btnBase }}>
+        📷 Scan foto
+      </button>
+
+      {open && (
+        <div style={{ position: "fixed", inset: 0, zIndex: 300, display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div onClick={close} style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,.55)" }} />
+          <div style={{ position: "relative", background: C.surface, borderRadius: 14, width: m ? "97vw" : 500, maxWidth: "97vw", maxHeight: "92vh", overflowY: "auto", boxShadow: "0 8px 40px rgba(0,0,0,.3)", display: "flex", flexDirection: "column" }}>
+
+            {/* Header */}
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 18px", background: C.header, borderBottom: `1px solid ${C.border}`, borderRadius: "14px 14px 0 0", flexShrink: 0 }}>
+              <span style={{ fontSize: 15, fontWeight: 700, color: C.text }}>📷 Scan — {labelMap[mode]}</span>
+              <button onClick={close} style={{ ...sx(false), border: "none", padding: "3px 10px", fontSize: 16 }}>✕</button>
+            </div>
+
+            <div style={{ padding: 18, flex: 1 }}>
+
+              {/* ── KEUZE ── */}
+              {screen === "keuze" && (
+                <div>
+                  <p style={{ fontSize: 13, color: C.muted, marginBottom: 18, lineHeight: 1.6 }}>
+                    Maak een foto met de camera of upload een bestaande afbeelding. De AI leest de afmetingen automatisch uit.
+                  </p>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                    <button onClick={startCamera} style={{ ...sb(C.accent, "#fff", true), ...btnBase, flexDirection: "column", padding: "20px 12px", borderRadius: 10, fontSize: 15, gap: 8 }}>
+                      <span style={{ fontSize: 32 }}>📷</span>
+                      Camera
+                    </button>
+                    <button onClick={() => fileRef.current?.click()} style={{ ...sb(C.surface, C.muted, true, { border: `1px solid ${C.border}` }), ...btnBase, flexDirection: "column", padding: "20px 12px", borderRadius: 10, fontSize: 15, gap: 8 }}>
+                      <span style={{ fontSize: 32 }}>🖼</span>
+                      Upload foto
+                    </button>
+                  </div>
+                  <input ref={fileRef} type="file" accept="image/*" style={{ display: "none" }} onChange={onFile} />
+                  {err && <Err msg={err} />}
+                </div>
+              )}
+
+              {/* ── CAMERA ── */}
+              {screen === "camera" && (
+                <div>
+                  <div style={{ position: "relative", borderRadius: 10, overflow: "hidden", background: "#000", marginBottom: 14 }}>
+                    <video ref={videoRef} autoPlay playsInline muted style={{ width: "100%", display: "block", maxHeight: 340, objectFit: "cover" }} />
+                    {/* Viewfinder overlay */}
+                    <div style={{ position: "absolute", inset: 0, border: "2px solid rgba(192,122,24,.6)", borderRadius: 10, pointerEvents: "none" }} />
+                  </div>
+                  <canvas ref={canvasRef} style={{ display: "none" }} />
+                  <div style={{ display: "flex", gap: 10 }}>
+                    <button onClick={snapPhoto} style={{ ...sb(C.accent, "#fff", true), flex: 1, ...btnBase, fontSize: 18, padding: "14px" }}>
+                      📸 Foto maken
+                    </button>
+                    <button onClick={() => { stopCam(); setScreen("keuze"); }} style={{ ...sd(true) }}>
+                      ← Terug
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {/* ── PREVIEW ── */}
+              {screen === "preview" && (
+                <div>
+                  <img src={imgUrl} alt="preview" style={{ width: "100%", borderRadius: 8, display: "block", marginBottom: 14, maxHeight: 300, objectFit: "contain", background: C.inpBg }} />
+                  {err && <Err msg={err} />}
+                  <div style={{ display: "flex", gap: 10 }}>
+                    <button onClick={analyse} style={{ ...sb(C.accent, "#fff", true), flex: 1, ...btnBase }}>
+                      🔍 Analyseer foto
+                    </button>
+                    <button onClick={() => setScreen("keuze")} style={{ ...sd(true) }}>← Opnieuw</button>
+                  </div>
+                </div>
+              )}
+
+              {/* ── LADEN ── */}
+              {screen === "laden" && (
+                <div style={{ textAlign: "center", padding: "32px 0" }}>
+                  <div style={{ fontSize: 40, marginBottom: 14 }}>⏳</div>
+                  <div style={{ fontSize: 15, color: C.muted }}>Afbeelding analyseren...</div>
+                  <img src={imgUrl} alt="" style={{ width: "100%", borderRadius: 8, marginTop: 16, opacity: 0.4, maxHeight: 200, objectFit: "contain" }} />
+                </div>
+              )}
+
+              {/* ── RESULTAAT ── */}
+              {screen === "resultaat" && preview && (
+                <div>
+                  <img src={imgUrl} alt="" style={{ width: "100%", borderRadius: 8, display: "block", marginBottom: 14, maxHeight: 200, objectFit: "contain", background: C.inpBg }} />
+                  <div style={{ background: C.greenBg, border: "1px solid #B0D9C0", borderRadius: 8, padding: 12, marginBottom: 14 }}>
+                    <div style={{ fontSize: 12, fontWeight: 700, color: C.green, marginBottom: 8 }}>✓ {preview.length} item{preview.length !== 1 ? "s" : ""} gevonden:</div>
+                    {preview.map((it, i) => (
+                      <div key={i} style={{ fontSize: 12, fontFamily: "monospace", color: C.text, padding: "3px 0", borderBottom: i < preview.length - 1 ? `1px solid ${C.border}` : "none" }}>
+                        {mode === "kortlijst" && `${it.kopmaat || "?"} · ${it.lengte}mm · ×${it.aantal}`}
+                        {mode === "latten"    && `${it.gewensteMaat || "?"} · ${it.lengte}mm · ×${it.aantal}`}
+                        {mode === "plaat"     && `${it.label || "?"} · ${it.breedte}×${it.hoogte}mm · ×${it.aantal}`}
+                      </div>
+                    ))}
+                  </div>
+                  <div style={{ display: "flex", gap: 10 }}>
+                    <button onClick={confirm} style={{ ...sb(C.green, "#fff", true), flex: 1, ...btnBase }}>✓ Toevoegen aan lijst</button>
+                    <button onClick={() => setScreen("preview")} style={{ ...sd(true) }}>← Opnieuw</button>
+                  </div>
+                </div>
+              )}
+
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+
+function InstellingenPage({ platen, setPlaten, kopmaten, setKopmaten, kerf, setKerf, kopVerlies, setKopVerlies, projectNaam, setProjectNaam, opgeslagen, onSave, onLoad, onDelete }) {
+  const m = useMob();
+  const updP = (id, k, v) => setPlaten(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const updK = (id, k, v) => setKopmaten(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+
+  return (
+    <div>
+      <Card title="Project opslaan / laden">
+        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginBottom: opgeslagen.length ? 14 : 0 }}>
+          <input style={{ ...si(m), flex: 1, minWidth: 160 }} value={projectNaam} onChange={e => setProjectNaam(e.target.value)} placeholder="Projectnaam..." />
+          <button style={sb(C.accent, "#fff", m)} onClick={onSave}>💾 Opslaan</button>
+        </div>
+        {opgeslagen.length > 0 && (
+          <div>
+            <Lbl>Opgeslagen projecten</Lbl>
+            {opgeslagen.map(p => (
+              <div key={p.id} style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 8, background: C.inpBg, borderRadius: 8, padding: "8px 12px", border: `1px solid ${C.border}` }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: C.text }}>{p.naam}</div>
+                  <div style={{ fontSize: 11, color: C.faint, fontFamily: "monospace" }}>{p.datum}</div>
+                </div>
+                <button style={{ ...sb(C.surface, C.muted, false, { border: `1px solid ${C.border}` }), fontSize: 13 }} onClick={() => onLoad(p)}>Laden</button>
+                <button style={{ ...sx(false), fontSize: 12 }} onClick={() => onDelete(p.id)}>✕</button>
+              </div>
+            ))}
+          </div>
+        )}
+        {opgeslagen.length === 0 && <div style={{ fontSize: 13, color: C.faint, fontStyle: "italic" }}>Nog geen projecten opgeslagen.</div>}
+      </Card>
+      <Card title="Zaagblad">
+        <div style={{ display: "grid", gridTemplateColumns: m ? "1fr" : "1fr 1fr", gap: 16, marginBottom: 4 }}>
+          <div>
+            <Lbl>Breedte zaagblad (mm)</Lbl>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <input type="number" style={{ ...si(m), maxWidth: m ? "100%" : 140 }} value={kerf} min={0} max={20} step={0.5} onChange={e => setKerf(Math.max(0, +e.target.value))} />
+              <div style={{ padding: "8px 12px", background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 8, fontSize: 13, color: C.accent, fontWeight: 700, fontFamily: "monospace" }}>{kerf}mm / snede</div>
+            </div>
+          </div>
+          <div>
+            <Lbl>Kopverlies per lat (mm)</Lbl>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <input type="number" style={{ ...si(m), maxWidth: m ? "100%" : 140 }} value={kopVerlies} min={0} max={200} step={5} onChange={e => setKopVerlies(Math.max(0, +e.target.value))} />
+              <div style={{ padding: "8px 12px", background: C.redBg, border: "1px solid #E8C0BB", borderRadius: 8, fontSize: 13, color: C.red, fontWeight: 700, fontFamily: "monospace" }}>{kopVerlies}mm afval begin lat</div>
+            </div>
+            <div style={{ fontSize: 12, color: C.faint, marginTop: 6 }}>De eerste {kopVerlies}mm van elke lat wordt als afval meegerekend bij de optimalisatie.</div>
+          </div>
+        </div>
+      </Card>
+
+      <Card title="Kopmaten">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>
+          Definieer beschikbare kopmaten. Voorraadlengtes komma-gescheiden, bijv. <span style={{ fontFamily: "monospace" }}>3000, 4000</span>
+        </p>
+        {!m && kopmaten.length > 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "2fr 3fr 2fr auto", gap: "0 8px", marginBottom: 6 }}>
+            {["Kopmaat", "Omschrijving", "Voorraad lengtes (mm)", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {kopmaten.map(k => m ? (
+          <div key={k.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
+            <MobField label="Kopmaat (b x h mm)"><input style={si(true)} value={k.kopmaat} onChange={e => updK(k.id, "kopmaat", e.target.value)} placeholder="45x70" /></MobField>
+            <MobField label="Omschrijving"><input style={si(true)} value={k.omschrijving} onChange={e => updK(k.id, "omschrijving", e.target.value)} placeholder="Vuren constructie" /></MobField>
+            <MobField label="Voorraad lengtes (mm)"><input style={si(true)} value={k.lengtes} onChange={e => updK(k.id, "lengtes", e.target.value)} placeholder="3000, 4000" /></MobField>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 8 }}>
+              <button style={sx(true)} onClick={() => setKopmaten(a => a.filter(x => x.id !== k.id))}>Verwijder</button>
+            </div>
+          </div>
+        ) : (
+          <div key={k.id} style={{ display: "grid", gridTemplateColumns: "2fr 3fr 2fr auto", gap: "0 8px", marginBottom: 8, alignItems: "center" }}>
+            <input style={si(false)} value={k.kopmaat} onChange={e => updK(k.id, "kopmaat", e.target.value)} placeholder="45x70" />
+            <input style={si(false)} value={k.omschrijving} onChange={e => updK(k.id, "omschrijving", e.target.value)} placeholder="Vuren constructie" />
+            <input style={si(false)} value={k.lengtes} onChange={e => updK(k.id, "lengtes", e.target.value)} placeholder="3000, 4000" />
+            <button style={sx(false)} onClick={() => setKopmaten(a => a.filter(x => x.id !== k.id))}>✕</button>
+          </div>
+        ))}
+        {kopmaten.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen kopmaten gedefinieerd.</div>}
+        <button style={sd(m)} onClick={() => setKopmaten(a => [...a, { id: uid(), kopmaat: "", omschrijving: "", lengtes: "5900" }])}>+ Kopmaat toevoegen</button>
+      </Card>
+
+      <Card title="Plaatmateriaal">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>Beschikbare platen met hun afmetingen.</p>
+        {!m && platen.length > 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr 2fr auto", gap: "0 8px", marginBottom: 6 }}>
+            {["Naam", "Breedte (mm)", "Hoogte (mm)", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {platen.map(p => m ? (
+          <div key={p.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
+            <MobField label="Naam / Type / Dikte"><input style={si(true)} value={p.naam} onChange={e => updP(p.id, "naam", e.target.value)} placeholder="MDF 18mm" /></MobField>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              <MobField label="Breedte (mm)"><input type="number" style={si(true)} value={p.breedte} min={100} onChange={e => updP(p.id, "breedte", +e.target.value)} /></MobField>
+              <MobField label="Hoogte (mm)"><input type="number" style={si(true)} value={p.hoogte} min={100} onChange={e => updP(p.id, "hoogte", +e.target.value)} /></MobField>
+            </div>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 8 }}>
+              <button style={sx(true)} onClick={() => setPlaten(a => a.filter(x => x.id !== p.id))}>Verwijder</button>
+            </div>
+          </div>
+        ) : (
+          <div key={p.id} style={{ display: "grid", gridTemplateColumns: "3fr 2fr 2fr auto", gap: "0 8px", marginBottom: 8, alignItems: "center" }}>
+            <input style={si(false)} value={p.naam} onChange={e => updP(p.id, "naam", e.target.value)} placeholder="MDF 18mm" />
+            <input type="number" style={si(false)} value={p.breedte} min={100} onChange={e => updP(p.id, "breedte", +e.target.value)} />
+            <input type="number" style={si(false)} value={p.hoogte} min={100} onChange={e => updP(p.id, "hoogte", +e.target.value)} />
+            <button style={sx(false)} onClick={() => setPlaten(a => a.filter(x => x.id !== p.id))}>✕</button>
+          </div>
+        ))}
+        {platen.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen platen toegevoegd.</div>}
+        <button style={sd(m)} onClick={() => setPlaten(a => [...a, { id: uid(), naam: "", breedte: 2440, hoogte: 1220 }])}>+ Plaat toevoegen</button>
+      </Card>
+    </div>
+  );
+}
+
+
+/* ─── ZAAGLIJST ────────────────────────────────────────────────── */
+function ZaaglijstPage({ items, setItems, results, onCalc, kopmaten, kerf, opgeslagen = [] }) {
+  const m = useMob();
+  const upd = (id, k, v) => setItems(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const colorById = Object.fromEntries(items.map((it, i) => [it.id, COLORS[i % COLORS.length]]));
+
+  const getLens = km => {
+    const k = kopmaten.find(k => k.kopmaat === km);
+    return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : [];
+  };
+  const onKm = (id, km) => {
+    const opts = getLens(km);
+    setItems(a => a.map(x => x.id === id ? { ...x, kopmaat: km, stockLength: opts[0] || 0 } : x));
+  };
+  const onGewenste = (id, gm) => {
+    const match = matchKm(gm, kopmaten);
+    const lens = match ? getLens(match.kopmaat) : [];
+    setItems(a => a.map(x => x.id === id ? { ...x, gewensteMaat: gm, matchedKopmaat: match ? match.kopmaat : "", stockLength: lens[0] || 0 } : x));
+  };
+  const onMode = (id, mode) => {
+    setItems(a => a.map(x => x.id === id
+      ? { ...x, mode, kopmaat: "", stockLength: 0, gewensteMaat: "", matchedKopmaat: "" }
+      : x));
+  };
+
+  // Mobile: compact row rendering
+  const MobRow = ({ it }) => {
+    const isAuto = it.mode === "auto";
+    const lOpts  = getLens(isAuto ? it.matchedKopmaat : it.kopmaat);
+    const match  = isAuto ? matchKm(it.gewensteMaat, kopmaten) : null;
+    const matchOk = !!match;
+
+    return (
+      <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 12px", marginBottom: 8, display: "flex", flexDirection: "column", gap: 8 }}>
+        {/* Row 1: color dot + mode + kopmaat + voorraad */}
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <div style={{ width: 12, height: 12, borderRadius: 3, background: colorById[it.id], flexShrink: 0, marginTop: 1 }} />
+          {/* Mode toggle */}
+          <div style={{ display: "flex", gap: 3, flexShrink: 0 }}>
+            {["vast","auto"].map(mo => (
+              <button key={mo} onClick={() => onMode(it.id, mo)} style={{
+                padding: "5px 9px", borderRadius: 5, fontSize: 12, fontWeight: 700, cursor: "pointer",
+                border: `1px solid ${it.mode === mo ? C.accent : C.border}`,
+                background: it.mode === mo ? C.accentBg : C.inpBg,
+                color: it.mode === mo ? C.accent : C.faint,
+              }}>{mo === "vast" ? "V" : "A"}</button>
+            ))}
+          </div>
+          {/* Kopmaat / gewenste maat */}
+          {isAuto ? (
+            <input
+              style={{ ...si(true), flex: 1, fontSize: 15, minHeight: 40 }}
+              value={it.gewensteMaat} placeholder="b×h (bijv. 60x85)"
+              onChange={e => onGewenste(it.id, e.target.value)}
+            />
+          ) : (
+            <select style={{ ...ss(true), flex: 1, fontSize: 15, minHeight: 40 }}
+              value={it.kopmaat} onChange={e => onKm(it.id, e.target.value)}>
+              <option value="">Kopmaat...</option>
+              {kopmaten.filter(k => k.kopmaat).map(k => (
+                <option key={k.id} value={k.kopmaat}>{k.kopmaat}</option>
+              ))}
+            </select>
+          )}
+          {/* Delete */}
+          <button style={{ ...sx(true), padding: "8px 12px", flexShrink: 0 }}
+            onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>✕</button>
+        </div>
+
+        {/* Auto match feedback */}
+        {isAuto && it.gewensteMaat && (
+          <div style={{ fontSize: 13, fontFamily: "monospace", padding: "6px 10px", borderRadius: 6,
+            background: matchOk ? C.greenBg : C.redBg,
+            border: `1px solid ${matchOk ? "#B0D9C0" : "#E8C0BB"}`,
+            color: matchOk ? C.green : C.red }}>
+            {matchOk ? `✓ ${match.kopmaat}` : "Geen match"}
+          </div>
+        )}
+
+        {/* Row 2: voorraad lengte + gewenste lengte + aantal */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr auto", gap: 8, alignItems: "center" }}>
+          <div>
+            <div style={{ fontSize: 10, color: C.faint, letterSpacing: 1, marginBottom: 3, textTransform: "uppercase" }}>Voorraad</div>
+            <select style={{ ...ss(true), fontSize: 14, minHeight: 44 }}
+              value={it.stockLength}
+              onChange={e => upd(it.id, "stockLength", +e.target.value)}
+              disabled={isAuto ? !matchOk : !it.kopmaat}>
+              <option value="0">—</option>
+              {lOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+            </select>
+          </div>
+          <div>
+            <div style={{ fontSize: 10, color: C.faint, letterSpacing: 1, marginBottom: 3, textTransform: "uppercase" }}>Lengte (mm)</div>
+            <input type="number" inputMode="numeric"
+              style={{ ...si(true), fontSize: 16, minHeight: 44, fontFamily: "monospace", fontWeight: 700 }}
+              value={it.lengte} min={1}
+              onChange={e => upd(it.id, "lengte", +e.target.value)} />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
+            <div style={{ fontSize: 10, color: C.faint, letterSpacing: 1, textTransform: "uppercase" }}>Aantal</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <button style={{ width: 36, height: 44, background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 6, fontSize: 20, fontWeight: 700, color: C.accent, cursor: "pointer" }}
+                onClick={() => upd(it.id, "aantal", Math.max(1, it.aantal - 1))}>−</button>
+              <div style={{ fontSize: 18, fontWeight: 700, fontFamily: "monospace", color: C.text, minWidth: 28, textAlign: "center" }}>{it.aantal}</div>
+              <button style={{ width: 36, height: 44, background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 6, fontSize: 20, fontWeight: 700, color: C.accent, cursor: "pointer" }}
+                onClick={() => upd(it.id, "aantal", it.aantal + 1)}>+</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Duplicate button */}
+        <button style={{ ...sd(true), fontSize: 13, padding: "6px 0", textAlign: "center" }}
+          onClick={() => setItems(a => [...a, { ...it, id: uid() }])}>⎘ Dupliceer rij</button>
+      </div>
+    );
+  };
+
+  // Desktop row
+  const DeskRow = ({ it }) => {
+    const isAuto = it.mode === "auto";
+    const lOpts  = getLens(isAuto ? it.matchedKopmaat : it.kopmaat);
+    const match  = isAuto ? matchKm(it.gewensteMaat, kopmaten) : null;
+    const matchOk = !!match;
+    const matchStyle = {
+      padding: "7px 10px", borderRadius: 6, fontSize: 12, fontFamily: "monospace",
+      overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap",
+      background: matchOk ? C.greenBg : it.gewensteMaat ? C.redBg : C.surface,
+      border: `1px solid ${matchOk ? "#B0D9C0" : it.gewensteMaat ? "#E8C0BB" : C.border}`,
+      color: matchOk ? C.green : it.gewensteMaat ? C.red : C.faint,
+    };
+    return (
+      <div style={{ display: "grid", gridTemplateColumns: "12px 70px 2fr 2fr 160px auto 26px 26px", gap: "0 6px", marginBottom: 7, alignItems: "center" }}>
+        <div style={{ width: 12, height: 12, borderRadius: 3, background: colorById[it.id] }} />
+        <div style={{ display: "flex", gap: 3 }}>
+          {["vast","auto"].map(mo => (
+            <button key={mo} onClick={() => onMode(it.id, mo)} style={{
+              flex: 1, padding: "4px 3px", borderRadius: 5, cursor: "pointer",
+              border: `1px solid ${it.mode === mo ? C.accent : C.border}`,
+              background: it.mode === mo ? C.accentBg : C.surface,
+              color: it.mode === mo ? C.accent : C.faint,
+              fontWeight: 700, fontSize: 11,
+            }}>{mo === "vast" ? "V" : "A"}</button>
+          ))}
+        </div>
+        {isAuto
+          ? <input style={si(false)} value={it.gewensteMaat} placeholder="b×h mm" onChange={e => onGewenste(it.id, e.target.value)} />
+          : <select style={ss(false)} value={it.kopmaat} onChange={e => onKm(it.id, e.target.value)}>
+              <option value="">Kopmaat...</option>
+              {kopmaten.filter(k => k.kopmaat).map(k => <option key={k.id} value={k.kopmaat}>{k.kopmaat}</option>)}
+            </select>
+        }
+        {isAuto
+          ? <div style={{ ...matchStyle, minHeight: 34 }}>{match ? `✓ ${match.kopmaat}` : it.gewensteMaat ? "Geen match" : "—"}</div>
+          : <select style={ss(false)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!it.kopmaat}>
+              <option value="0">Voorraad...</option>
+              {lOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+            </select>
+        }
+        {isAuto
+          ? <select style={ss(false)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!matchOk}>
+              <option value="0">Voorraad...</option>
+              {lOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+            </select>
+          : <input type="number" style={si(false)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} />
+        }
+        {isAuto
+          ? <input type="number" style={si(false)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} />
+          : <Stepper value={it.aantal} onChange={v => upd(it.id, "aantal", v)} />
+        }
+        {isAuto
+          ? <Stepper value={it.aantal} onChange={v => upd(it.id, "aantal", v)} />
+          : <button title="Dup" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 13, padding: "4px 7px" }} onClick={() => setItems(a => [...a, { ...it, id: uid() }])}>⎘</button>
+        }
+        {isAuto
+          ? <button title="Dup" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 13, padding: "4px 7px" }} onClick={() => setItems(a => [...a, { ...it, id: uid() }])}>⎘</button>
+          : <button style={sx(false)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>✕</button>
+        }
+      </div>
+    );
+  };
+
+  const newItem = (mode = "vast") => {
+    // Pre-fill kopmaat with first available, and stockLength
+    const firstKm = kopmaten.find(k => k.kopmaat);
+    const firstSl = firstKm?.lengtes ? +firstKm.lengtes.split(",")[0].trim() : 0;
+    return {
+      id: uid(), mode,
+      kopmaat: mode === "vast" ? (firstKm?.kopmaat || "") : "",
+      stockLength: mode === "vast" ? firstSl : 0,
+      gewensteMaat: "", matchedKopmaat: "", lengte: 1000, aantal: 1,
+    };
+  };
+
+  return (
+    <div>
+      <Card title="Zaaglijst">
+        {!kopmaten.filter(k => k.kopmaat).length && <Warn msg="Voeg eerst kopmaten toe via Instellingen." />}
+
+        {/* Desktop header */}
+        {!m && items.length > 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "12px 70px 2fr 2fr 160px auto 26px 26px", gap: "0 6px", marginBottom: 6 }}>
+            {["", "Modus", "Kopmaat / Gewenst", "Match / Voorraad", "Voorraad / Lengte", "Lengte / Aantal", "", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+
+        {items.map(it => m
+          ? <MobRow key={it.id} it={it} />
+          : <DeskRow key={it.id} it={it} />
+        )}
+
+        {items.length === 0 && (
+          <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic", textAlign: m ? "center" : "left", padding: m ? "20px 0" : 0 }}>
+            Nog geen regels. Klik + om te beginnen.
+          </div>
+        )}
+
+        {/* Buttons */}
+        <div style={{ display: "flex", gap: 10, marginTop: 14, flexWrap: "wrap", alignItems: "flex-start" }}>
+          {m ? (
+            // Mobile: big prominent add buttons
+            <>
+              <button style={{ ...sb(C.accent, "#fff", true), flex: 1, fontSize: 17, padding: "14px 10px" }}
+                onClick={() => setItems(a => [...a, newItem("vast")])}>
+                + Vast kopmaat
+              </button>
+              <button style={{ ...sb(C.surface, C.accent, true, { border: `1.5px solid ${C.accent}` }), flex: 1, fontSize: 17, padding: "14px 10px" }}
+                onClick={() => setItems(a => [...a, newItem("auto")])}>
+                + Auto match
+              </button>
+            </>
+          ) : (
+            <>
+              <button style={sd(false)} onClick={() => setItems(a => [...a, newItem("vast")])}>+ Vast</button>
+              <button style={sd(false)} onClick={() => setItems(a => [...a, newItem("auto")])}>+ Auto</button>
+            </>
+          )}
+          <QuickInput mode="kortlijst" kopmaten={kopmaten} placeholder={"45x70 800x5 1200x3\nof plak uit Excel"} onAdd={rows => {
+            const gl = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setItems(a => [...a, ...rows.map(r => ({ id: uid(), mode: "vast", kopmaat: r.kopmaat || "", stockLength: gl(r.kopmaat)[0] || 0, gewensteMaat: "", matchedKopmaat: "", lengte: r.lengte || 0, aantal: r.aantal || 1 }))]);
+          }} />
+          <FotoScan mode="kortlijst" kopmaten={kopmaten} onResult={rows => {
+            const gl = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setItems(a => [...a, ...rows.map(r => ({ id: uid(), mode: "vast", kopmaat: r.kopmaat || "", stockLength: gl(r.kopmaat)[0] || 0, gewensteMaat: "", matchedKopmaat: "", lengte: r.lengte || 0, aantal: r.aantal || 1 }))]);
+          }} />
+          <button style={{ ...sb(C.accent, "#fff", m), ...(m ? { width: "100%", fontSize: 17, padding: "15px", marginTop: 4 } : {}) }} onClick={onCalc}>
+            ⚙ Bereken zaagplan
+          </button>
+          {opgeslagen.length > 0 && (
+            <select style={{ ...ss(m), ...(m ? { width: "100%" } : { minWidth: 180 }) }}
+              onChange={e => {
+                if (!e.target.value) return;
+                const proj = opgeslagen.find(p => p.id === e.target.value);
+                if (!proj) return;
+                const extra = (proj.zItems || proj.kItems || []).map(it => ({ ...it, id: uid() }));
+                setItems(a => [...a, ...extra]);
+                e.target.value = "";
+              }}>
+              <option value="">+ Voeg project toe...</option>
+              {opgeslagen.map(p => <option key={p.id} value={p.id}>{p.naam} ({p.datum})</option>)}
+            </select>
+          )}
+        </div>
+      </Card>
+      <Results1D results={results} colorById={colorById} allItems={items} kerf={kerf} />
+    </div>
+  );
+}
+
+
+/* ─── KORTLIJST ─────────────────────────────────── */
+function KortlijstPage({ items, setItems, results, onCalc, kopmaten, kerf }) {
+  const m = useMob();
+  const upd = (id, k, v) => setItems(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const colorById = Object.fromEntries(items.map((it, i) => [it.id, COLORS[i % COLORS.length]]));
+  const getLens = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+  const onKm = (id, km) => { const opts = getLens(km); setItems(a => a.map(x => x.id === id ? { ...x, kopmaat: km, stockLength: opts[0] || 0 } : x)); };
+
+  return (
+    <div>
+      <Card title="Benodigd Hout">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>Selecteer kopmaat en voorraadlengte en voer de benodigde stukken in.</p>
+        {!kopmaten.filter(k => k.kopmaat).length && <Warn msg="Voeg eerst kopmaten toe via Instellingen." />}
+        {!m && (
+          <div style={{ display: "grid", gridTemplateColumns: "14px 2fr 2fr 2fr auto 28px 28px", gap: "0 6px", marginBottom: 6 }}>
+            {["", "Kopmaat", "Voorraad lengte", "Gewenste lengte (mm)", "Aantal", "", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {items.map(it => {
+          const lOpts = getLens(it.kopmaat);
+          return m ? (
+            <div key={it.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12, position: "relative" }}>
+              <div style={{ position: "absolute", top: 16, right: 16, width: 14, height: 14, borderRadius: 3, background: colorById[it.id] }} />
+              <MobField label="Kopmaat">
+                <select style={ss(true)} value={it.kopmaat} onChange={e => onKm(it.id, e.target.value)}>
+                  <option value="">Selecteer...</option>
+                  {kopmaten.filter(k => k.kopmaat).map(k => <option key={k.id} value={k.kopmaat}>{k.kopmaat}{k.omschrijving ? ` — ${k.omschrijving}` : ""}</option>)}
+                </select>
+              </MobField>
+              <MobField label="Voorraad lengte">
+                <select style={ss(true)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!it.kopmaat}>
+                  <option value="0">Selecteer...</option>
+                  {lOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+                </select>
+              </MobField>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                <MobField label="Gewenste lengte (mm)"><input type="number" style={si(true)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} /></MobField>
+                <MobField label="Aantal"><input type="number" style={si(true)} value={it.aantal} min={1} onChange={e => upd(it.id, "aantal", +e.target.value)} /></MobField>
+              </div>
+              <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 10 }}>
+                <button style={sx(true)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>Verwijder rij</button>
+              </div>
+            </div>
+          ) : (
+            <div key={it.id} style={{ display: "grid", gridTemplateColumns: "14px 2fr 2fr 2fr auto 28px 28px", gap: "0 6px", marginBottom: 8, alignItems: "center" }}>
+              <div style={{ width: 14, height: 14, borderRadius: 3, background: colorById[it.id] }} />
+              <select style={ss(false)} value={it.kopmaat} onChange={e => onKm(it.id, e.target.value)}>
+                <option value="">Selecteer...</option>
+                {kopmaten.filter(k => k.kopmaat).map(k => <option key={k.id} value={k.kopmaat}>{k.kopmaat}{k.omschrijving ? ` — ${k.omschrijving}` : ""}</option>)}
+              </select>
+              <select style={ss(false)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!it.kopmaat}>
+                <option value="0">Selecteer...</option>
+                {lOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+              </select>
+              <input type="number" style={si(false)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} />
+              <Stepper value={it.aantal} onChange={v => upd(it.id, "aantal", v)} />
+              <button title="Dupliceer" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 14, padding: "4px 7px" }} onClick={() => setItems(a => [...a, { ...it, id: uid() }])}>⎘</button>
+              <button style={sx(false)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>✕</button>
+            </div>
+          );
+        })}
+        {items.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen regels toegevoegd.</div>}
+        <div style={{ display: "flex", gap: 10, marginTop: 12, flexWrap: "wrap", alignItems: "flex-start" }}>
+          <button style={sd(m)} onClick={() => setItems(a => [...a, { id: uid(), kopmaat: "", stockLength: 0, lengte: 800, aantal: 1 }])}>+ Rij</button>
+          <QuickInput mode="kortlijst" kopmaten={kopmaten} placeholder={"45x70 800x5 1200x3\nof plak uit Excel"} onAdd={rows => {
+            const gl = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setItems(a => [...a, ...rows.map(r => ({ id: uid(), kopmaat: r.kopmaat || "", stockLength: gl(r.kopmaat)[0] || 0, lengte: r.lengte || 0, aantal: r.aantal || 1 }))]);
+          }} />
+          <FotoScan mode="kortlijst" kopmaten={kopmaten} onResult={rows => {
+            const getLens = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setItems(a => [...a, ...rows.map(r => ({ id: uid(), kopmaat: r.kopmaat || "", stockLength: getLens(r.kopmaat)[0] || 0, lengte: r.lengte || 0, aantal: r.aantal || 1 }))]);
+          }} />
+          <button style={sb(C.accent, "#fff", m)} onClick={onCalc}>⚙ Bereken</button>
+        </div>
+      </Card>
+      <Results1D results={results} colorById={colorById} allItems={items} kerf={kerf} />
+    </div>
+  );
+}
+
+/* ─── LATTEN ────────────────────────────────────── */
+function LattenPage({ items, setItems, results, onCalc, kopmaten, kerf }) {
+  const m = useMob();
+  const upd = (id, k, v) => setItems(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const colorById = Object.fromEntries(items.map((it, i) => [it.id, COLORS[i % COLORS.length]]));
+  const getLens = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+  const onGewenste = (id, gm) => {
+    const match = matchKm(gm, kopmaten);
+    const lens = match ? getLens(match.kopmaat) : [];
+    setItems(a => a.map(x => x.id === id ? { ...x, gewensteMaat: gm, matchedKopmaat: match ? match.kopmaat : "", stockLength: lens[0] || 0 } : x));
+  };
+
+  return (
+    <div>
+      <Card title="Latten Optimalisatie">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>
+          Vul de <strong>gewenste kopmaat</strong> in (bijv. <span style={{ fontFamily: "monospace" }}>40x60</span>). Het algoritme zoekt automatisch de kleinste passende kopmaat uit de voorraad.
+        </p>
+        {!kopmaten.filter(k => k.kopmaat).length && <Warn msg="Voeg eerst kopmaten toe via Instellingen." />}
+        {!m && (
+          <div style={{ display: "grid", gridTemplateColumns: "14px 1.8fr 2fr 1.8fr 1.8fr auto 28px 28px", gap: "0 6px", marginBottom: 6 }}>
+            {["", "Gewenste kopmaat", "Beste match", "Voorraad lengte", "Lengte (mm)", "Aantal", "", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {items.map(it => {
+          const match = matchKm(it.gewensteMaat, kopmaten);
+          const slOpts = match ? getLens(match.kopmaat) : [];
+          const matchOk = !!match;
+          const matchLabel = match ? `✓ ${match.kopmaat}${match.omschrijving ? " — " + match.omschrijving : ""}` : it.gewensteMaat ? "Geen match" : "—";
+          const matchStyle = { padding: "7px 10px", borderRadius: 6, fontSize: 12, fontFamily: "monospace", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", background: matchOk ? C.greenBg : it.gewensteMaat ? C.redBg : C.surface, border: `1px solid ${matchOk ? "#B0D9C0" : it.gewensteMaat ? "#E8C0BB" : C.border}`, color: matchOk ? C.green : it.gewensteMaat ? C.red : C.faint };
+          return m ? (
+            <div key={it.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12, position: "relative" }}>
+              <div style={{ position: "absolute", top: 16, right: 16, width: 14, height: 14, borderRadius: 3, background: colorById[it.id] }} />
+              <MobField label="Gewenste kopmaat"><input style={si(true)} value={it.gewensteMaat} placeholder="bijv. 40x60" onChange={e => onGewenste(it.id, e.target.value)} /></MobField>
+              <div style={{ ...matchStyle, marginBottom: 10, padding: "10px 12px", fontSize: 14 }}>{matchLabel}</div>
+              <MobField label="Voorraad lengte">
+                <select style={ss(true)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!matchOk}>
+                  <option value="0">Selecteer...</option>
+                  {slOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+                </select>
+              </MobField>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                <MobField label="Gewenste lengte (mm)"><input type="number" style={si(true)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} /></MobField>
+                <MobField label="Aantal"><input type="number" style={si(true)} value={it.aantal} min={1} onChange={e => upd(it.id, "aantal", +e.target.value)} /></MobField>
+              </div>
+              <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 10 }}>
+                <button style={sx(true)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>Verwijder rij</button>
+              </div>
+            </div>
+          ) : (
+            <div key={it.id} style={{ display: "grid", gridTemplateColumns: "14px 1.8fr 2fr 1.8fr 1.8fr auto 28px 28px", gap: "0 6px", marginBottom: 8, alignItems: "center" }}>
+              <div style={{ width: 14, height: 14, borderRadius: 3, background: colorById[it.id] }} />
+              <input style={si(false)} value={it.gewensteMaat} placeholder="40x60" onChange={e => onGewenste(it.id, e.target.value)} />
+              <div style={matchStyle}>{matchLabel}</div>
+              <select style={ss(false)} value={it.stockLength} onChange={e => upd(it.id, "stockLength", +e.target.value)} disabled={!matchOk}>
+                <option value="0">Selecteer...</option>
+                {slOpts.map(sl => <option key={sl} value={sl}>{sl}mm</option>)}
+              </select>
+              <input type="number" style={si(false)} value={it.lengte} min={1} onChange={e => upd(it.id, "lengte", +e.target.value)} />
+              <Stepper value={it.aantal} onChange={v => upd(it.id, "aantal", v)} />
+              <button title="Dupliceer" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 14, padding: "4px 7px" }} onClick={() => setItems(a => [...a, { ...it, id: uid() }])}>⎘</button>
+              <button style={sx(false)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>✕</button>
+            </div>
+          );
+        })}
+        {items.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen regels toegevoegd.</div>}
+        <div style={{ display: "flex", gap: 10, marginTop: 12, flexWrap: "wrap", alignItems: "flex-start" }}>
+          <button style={sd(m)} onClick={() => setItems(a => [...a, { id: uid(), gewensteMaat: "", matchedKopmaat: "", stockLength: 0, lengte: 800, aantal: 1 }])}>+ Rij</button>
+          <QuickInput mode="latten" kopmaten={kopmaten} placeholder={"40x60 800x5 1200x3\nof plak uit Excel"} onAdd={rows => {
+            setItems(a => [...a, ...rows.map(r => {
+              const match = matchKm(r.kopmaat || r.gewensteMaat || "", kopmaten);
+              const lens = match ? (match.lengtes ? match.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []) : [];
+              return { id: uid(), gewensteMaat: r.kopmaat || r.gewensteMaat || "", matchedKopmaat: match ? match.kopmaat : "", stockLength: lens[0] || 0, lengte: r.lengte || 0, aantal: r.aantal || 1 };
+            })]);
+          }} />
+          <FotoScan mode="latten" kopmaten={kopmaten} onResult={rows => {
+            setItems(a => [...a, ...rows.map(r => {
+              const match = matchKm(r.gewensteMaat || "", kopmaten);
+              const lens = match ? (match.lengtes ? match.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []) : [];
+              return { id: uid(), gewensteMaat: r.gewensteMaat || "", matchedKopmaat: match?.kopmaat || "", stockLength: lens[0] || 0, lengte: r.lengte || 0, aantal: r.aantal || 1 };
+            })]);
+          }} />
+          <button style={sb(C.accent, "#fff", m)} onClick={onCalc}>⚙ Bereken</button>
+        </div>
+      </Card>
+      <Results1D results={results} colorById={colorById} allItems={items} kerf={kerf} />
+    </div>
+  );
+}
+
+/* ─── PLAATMATERIAAL ────────────────────────────── */
+function PlaatPage({ platen, items, setItems, plaatId, setPlaatId, results, onCalc, kerf }) {
+  const m = useMob();
+  const upd = (id, k, v) => setItems(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const total = items.reduce((s, it) => s + it.aantal, 0);
+
+  return (
+    <div>
+      <Card title="Plaatmateriaal Optimalisatie">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>Selecteer het plaattype en voer de benodigde stukken in.</p>
+        <div style={{ marginBottom: 18 }}>
+          <Lbl>Plaat type</Lbl>
+          <select style={{ ...ss(m), maxWidth: m ? "100%" : 360 }} value={plaatId} onChange={e => setPlaatId(e.target.value)}>
+            <option value="">Kies een plaat...</option>
+            {platen.map(p => <option key={p.id} value={p.id}>{p.naam} ({p.breedte}x{p.hoogte}mm)</option>)}
+          </select>
+          {!platen.length && <div style={{ fontSize: 13, color: C.accent, marginTop: 6 }}>⚠ Voeg platen toe via Instellingen.</div>}
+        </div>
+        {!m && (
+          <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr 2fr 1fr 34px", gap: "0 8px", marginBottom: 6 }}>
+            {["Omschrijving", "Breedte (mm)", "Hoogte (mm)", "Aantal", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {items.map((it, idx) => m ? (
+          <div key={it.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12, position: "relative" }}>
+            <div style={{ position: "absolute", top: 16, right: 16, width: 14, height: 14, borderRadius: 3, background: COLORS[idx % COLORS.length] }} />
+            <MobField label="Omschrijving"><input style={si(true)} value={it.label} onChange={e => upd(it.id, "label", e.target.value)} placeholder="Zijwand" /></MobField>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+              <MobField label="Breedte (mm)"><input type="number" style={si(true)} value={it.breedte} min={1} onChange={e => upd(it.id, "breedte", +e.target.value)} /></MobField>
+              <MobField label="Hoogte (mm)"><input type="number" style={si(true)} value={it.hoogte} min={1} onChange={e => upd(it.id, "hoogte", +e.target.value)} /></MobField>
+              <MobField label="Aantal"><input type="number" style={si(true)} value={it.aantal} min={1} onChange={e => upd(it.id, "aantal", +e.target.value)} /></MobField>
+            </div>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 10 }}>
+              <button style={sx(true)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>Verwijder</button>
+            </div>
+          </div>
+        ) : (
+          <div key={it.id} style={{ display: "grid", gridTemplateColumns: "3fr 2fr 2fr 1fr 34px", gap: "0 8px", marginBottom: 8, alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <div style={{ width: 11, height: 11, borderRadius: 2, background: COLORS[idx % COLORS.length], flexShrink: 0 }} />
+              <input style={{ ...si(false), flex: 1 }} value={it.label} onChange={e => upd(it.id, "label", e.target.value)} placeholder="Zijwand" />
+            </div>
+            <input type="number" style={si(false)} value={it.breedte} min={1} onChange={e => upd(it.id, "breedte", +e.target.value)} />
+            <input type="number" style={si(false)} value={it.hoogte} min={1} onChange={e => upd(it.id, "hoogte", +e.target.value)} />
+            <input type="number" style={si(false)} value={it.aantal} min={1} onChange={e => upd(it.id, "aantal", +e.target.value)} />
+            <button style={sx(false)} onClick={() => setItems(a => a.filter(x => x.id !== it.id))}>✕</button>
+          </div>
+        ))}
+        {items.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen stukken toegevoegd.</div>}
+        <div style={{ display: "flex", gap: 10, marginTop: 12, flexWrap: "wrap" }}>
+          <button style={sd(m)} onClick={() => setItems(a => [...a, { id: uid(), label: "", breedte: 300, hoogte: 400, aantal: 1 }])}>+ Stuk toevoegen</button>
+          <FotoScan mode="plaat" kopmaten={[]} onResult={rows => {
+            setItems(a => [...a, ...rows.map(r => ({ id: uid(), label: r.label || "", breedte: r.breedte || 300, hoogte: r.hoogte || 400, aantal: r.aantal || 1 }))]);
+          }} />
+          <button style={{ ...sb(C.accent, "#fff", m), opacity: plaatId ? 1 : 0.4, cursor: plaatId ? "pointer" : "not-allowed" }} onClick={plaatId ? onCalc : undefined}>⚙ Bereken zaagplan</button>
+        </div>
+      </Card>
+      {results && (
+        <Card title="Zaagplan Resultaten">
+          <Stats items={[["Platen benodigd", results.sheets.length], ["Totaal stukken", total], ["Zaagblad", `${kerf}mm`]]} />
+          <div style={{ fontSize: 15, fontWeight: 700, color: C.accent, marginBottom: 14, display: "flex", alignItems: "center", gap: 8 }}>
+            <div style={{ height: 3, width: 18, background: C.accent, borderRadius: 2 }} />
+            {results.plaat.naam} — {results.sheets.length} plaat{results.sheets.length !== 1 ? "en" : ""}
+          </div>
+          {(results.errs || []).map((e, i) => <Err key={i} msg={e} />)}
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>
+            {items.map((it, i) => (
+              <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 6, background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 6, padding: "5px 10px" }}>
+                <div style={{ width: 10, height: 10, borderRadius: 2, background: COLORS[i % COLORS.length] }} />
+                <span style={{ fontSize: 13, color: C.muted, fontFamily: "monospace" }}>{it.label || `${it.breedte}x${it.hoogte}`} ×{it.aantal}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 20 }}>
+            {results.sheets.map((s, i) => <SheetVis key={i} sheet={s} idx={i} />)}
+          </div>
+        </Card>
+      )}
+    </div>
+  );
+}
+
+/* ─── PRINT VIEW ───────────────────────────────── */
+function PrintCutBar({ bin, kerf }) {
+  const VW = 500, VH = 34;
+  const sc = VW / bin.stockLen;
+  let cx = 0;
+  const segs = bin.cuts.map((c, i) => {
+    const kw = i ? kerf * sc : 0, x = cx + kw, w = c.len * sc;
+    cx = x + w;
+    return { x, w, color: COLORS[i % COLORS.length], label: String(c.len) };
+  });
+  const wx = cx, ww = VW - cx;
+  return (
+    <svg viewBox={`0 0 ${VW} ${VH}`} style={{ width: "100%", display: "block", border: "1px solid #ddd", borderRadius: 4, marginBottom: 8 }}>
+      <rect width={VW} height={VH} fill="#F9F6F2" />
+      {segs.map((s, i) => (
+        <g key={i}>
+          <rect x={s.x} y={2} width={Math.max(s.w - 0.5, 0)} height={VH - 4} fill={s.color} rx={2} opacity={0.85} />
+          {s.w > 24 && <text x={s.x + s.w / 2} y={VH / 2 + 3} textAnchor="middle" fontSize={9} fill="white" fontFamily="monospace" fontWeight="700">{s.label}</text>}
+        </g>
+      ))}
+      {ww > 2 && <>
+        <rect x={wx} y={2} width={ww} height={VH - 4} fill="#EDE9E3" rx={2} />
+        {ww > 28 && <text x={wx + ww / 2} y={VH / 2 + 3} textAnchor="middle" fontSize={8} fill="#aaa" fontFamily="monospace">{bin.rem}mm</text>}
+      </>}
+    </svg>
+  );
+}
+
+function PrintView({ kResults, lResults, pResults, kerf, onClose }) {
+  const d = new Date().toLocaleDateString("nl-NL");
+  const hasData = (kResults && kResults.length) || (lResults && lResults.length) || pResults;
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "white", zIndex: 9000, overflowY: "auto" }}>
+      <style>{`@media print { .noprint { display: none !important; } }`}</style>
+      <div className="noprint" style={{ position: "fixed", top: 14, right: 14, display: "flex", gap: 8, zIndex: 9999 }}>
+        <button onClick={() => window.print()} style={{ background: "#1E1A15", color: "white", border: "none", borderRadius: 6, padding: "10px 18px", cursor: "pointer", fontSize: 14, fontWeight: 700 }}>🖨 Afdrukken / PDF</button>
+        <button onClick={onClose} style={{ background: "#C07A18", color: "white", border: "none", borderRadius: 6, padding: "10px 18px", cursor: "pointer", fontSize: 14, fontWeight: 700 }}>✕ Sluiten</button>
+      </div>
+      <div style={{ background: "white", color: "#1E1A15", fontFamily: "Arial, sans-serif", padding: 36, maxWidth: 800, margin: "0 auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", borderBottom: "2px solid #C07A18", paddingBottom: 10, marginBottom: 24 }}>
+          <div>
+            <div style={{ fontSize: 22, fontWeight: 700, letterSpacing: 3, color: "#C07A18" }}>🪚 ZAAGPLAN</div>
+            <div style={{ fontSize: 9, color: "#aaa", letterSpacing: 2, marginTop: 2 }}>HOUT OPTIMALISATIE</div>
+          </div>
+          <div style={{ fontSize: 11, color: "#aaa", textAlign: "right", lineHeight: 1.8 }}>
+            <div>{d}</div><div>Zaagblad: {kerf}mm</div>
+          </div>
+        </div>
+        {!hasData && <p style={{ color: "#aaa", fontStyle: "italic" }}>Geen berekeningen beschikbaar. Bereken eerst een zaagplan.</p>}
+        {kResults && kResults.length > 0 && (
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#7A7468", borderBottom: "1px solid #DDD9D2", paddingBottom: 5, marginBottom: 12 }}>Kortlijst</div>
+            {kResults.map((res, ri) => (
+              <div key={ri}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#C07A18", marginBottom: 6, marginTop: 12 }}>{res.kopmaat} — {res.stockLen}mm <span style={{ fontSize: 11, color: "#aaa", fontWeight: 400 }}>({res.bins.length} stuk{res.bins.length !== 1 ? "s" : ""})</span></div>
+                {res.bins.map((bin, bi) => (
+                  <div key={bi}>
+                    <div style={{ fontSize: 10, color: "#aaa", fontFamily: "monospace", marginBottom: 3 }}>Stuk #{bi + 1} · {bin.cuts.map(c => c.len + "mm").join(" + ")} · Afval: {bin.rem}mm ({(bin.rem / bin.stockLen * 100).toFixed(1)}%)</div>
+                    <PrintCutBar bin={bin} kerf={kerf} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+        {lResults && lResults.length > 0 && (
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#7A7468", borderBottom: "1px solid #DDD9D2", paddingBottom: 5, marginBottom: 12 }}>Latten</div>
+            {lResults.map((res, ri) => (
+              <div key={ri}>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#C07A18", marginBottom: 6, marginTop: 12 }}>{res.kopmaat} — {res.stockLen}mm <span style={{ fontSize: 11, color: "#aaa", fontWeight: 400 }}>({res.bins.length} stuk{res.bins.length !== 1 ? "s" : ""})</span></div>
+                {res.bins.map((bin, bi) => (
+                  <div key={bi}>
+                    <div style={{ fontSize: 10, color: "#aaa", fontFamily: "monospace", marginBottom: 3 }}>Stuk #{bi + 1} · {bin.cuts.map(c => c.len + "mm").join(" + ")} · Afval: {bin.rem}mm ({(bin.rem / bin.stockLen * 100).toFixed(1)}%)</div>
+                    <PrintCutBar bin={bin} kerf={kerf} />
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+        {pResults && (
+          <div style={{ marginBottom: 24 }}>
+            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", color: "#7A7468", borderBottom: "1px solid #DDD9D2", paddingBottom: 5, marginBottom: 12 }}>Plaatmateriaal — {pResults.plaat.naam}</div>
+            <p style={{ fontSize: 12, color: "#7A7468", marginBottom: 12 }}>{pResults.sheets.length} plaat{pResults.sheets.length !== 1 ? "en" : ""} benodigd · {pResults.plaat.breedte}x{pResults.plaat.hoogte}mm</p>
+            {pResults.sheets.map((sheet, si) => {
+              const sc = Math.min(500 / sheet.w, 260 / sheet.h);
+              const W = sheet.w * sc, H = sheet.h * sc;
+              const used = sheet.cuts.reduce((a, c) => a + c.w * c.h, 0);
+              const waste = ((1 - used / (sheet.w * sheet.h)) * 100).toFixed(1);
+              return (
+                <div key={si} style={{ marginBottom: 18 }}>
+                  <div style={{ fontSize: 10, color: "#aaa", fontFamily: "monospace", marginBottom: 4 }}>Plaat #{si + 1} · {sheet.w}x{sheet.h}mm · Afval: {waste}%</div>
+                  <svg width={W} height={H} style={{ display: "block", border: "1px solid #ddd", borderRadius: 6 }}>
+                    <rect width={W} height={H} fill="#F9F6F2" />
+                    {sheet.cuts.map((c, ci) => (
+                      <g key={ci}>
+                        <rect x={c.x * sc} y={c.y * sc} width={c.w * sc - 0.5} height={c.h * sc - 0.5} fill={COLORS[ci % COLORS.length]} stroke="white" strokeWidth={1} rx={2} opacity={0.88} />
+                        {c.w * sc > 28 && c.h * sc > 14 && <text x={(c.x + c.w / 2) * sc} y={(c.y + c.h / 2) * sc + 4} textAnchor="middle" fontSize={9} fill="white" fontFamily="monospace" fontWeight="600">{c.label}</text>}
+                      </g>
+                    ))}
+                  </svg>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+
+
+/* ─── RESTLIJST ─────────────────────────────────── */
+function RestlijstPage({ restlijst, setRestlijst, kopmaten, onGebruik, slaRestenOp, kResults, lResults }) {
+  const m = useMob();
+  const upd = (id, k, v) => setRestlijst(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+  const [geselecteerd, setGeselecteerd] = useState([]);
+
+  const toggleSel = (id) => setGeselecteerd(s => s.includes(id) ? s.filter(x => x !== id) : [...s, id]);
+
+  const gebruikGeselecteerde = () => {
+    const items = restlijst
+      .filter(r => geselecteerd.includes(r.id))
+      .map(r => {
+        const k = kopmaten.find(k => k.kopmaat === r.kopmaat);
+        const sl = k && k.lengtes ? +k.lengtes.split(",")[0].trim() : 0;
+        return { id: uid(), kopmaat: r.kopmaat || "", stockLength: sl, lengte: r.lengte, aantal: 1 };
+      });
+    onGebruik(items);
+    setRestlijst(a => a.filter(r => !geselecteerd.includes(r.id)));
+    setGeselecteerd([]);
+  };
+
+  const newResten = (kResults ? kResults.flatMap(r => r.bins.filter(b => b.rem > 50).map(b => ({ kopmaat: r.kopmaat, rem: b.rem }))) : [])
+    .concat(lResults ? lResults.flatMap(r => r.bins.filter(b => b.rem > 50).map(b => ({ kopmaat: r.kopmaat, rem: b.rem }))) : []);
+
+  return (
+    <div>
+      {newResten.length > 0 && (
+        <Card title="Resten uit huidig zaagplan">
+          <p style={{ fontSize: 13, color: C.muted, marginBottom: 12 }}>
+            {newResten.length} rest{newResten.length !== 1 ? "en" : ""} gevonden in het huidige zaagplan ({">"} 50mm).
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 12 }}>
+            {newResten.map((r, i) => (
+              <div key={i} style={{ fontSize: 12, fontFamily: "monospace", background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 6, padding: "4px 10px", color: C.accent }}>
+                {r.kopmaat} · {r.rem}mm
+              </div>
+            ))}
+          </div>
+          <button style={sb(C.accent, "#fff", m)} onClick={() => { const n = slaRestenOp(kResults); slaRestenOp(lResults); }}>
+            + Sla alle resten op in restlijst
+          </button>
+        </Card>
+      )}
+
+      <Card title="Opgeslagen restanten">
+        <p style={{ fontSize: 13, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>
+          Bewaar restanten van vorige klussen en zet ze in als voorraadlengte bij een nieuw zaagplan.
+        </p>
+        {restlijst.length === 0 && (
+          <div style={{ color: C.faint, fontSize: 14, fontStyle: "italic", marginBottom: 14 }}>
+            Nog geen resten opgeslagen. Bereken eerst een zaagplan en sla de resten op via de knop hierboven.
+          </div>
+        )}
+        {!m && restlijst.length > 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "28px 2fr 2fr 3fr 28px 28px", gap: "0 8px", marginBottom: 6 }}>
+            {["✓", "Kopmaat", "Lengte (mm)", "Omschrijving", "", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+        {restlijst.map(r => m ? (
+          <div key={r.id} style={{ background: geselecteerd.includes(r.id) ? C.greenBg : C.inpBg, border: `1px solid ${geselecteerd.includes(r.id) ? "#B0D9C0" : C.border}`, borderRadius: 10, padding: 14, marginBottom: 10 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <label style={{ display: "flex", alignItems: "center", gap: 8, cursor: "pointer", fontSize: 14, fontWeight: 700 }}>
+                <input type="checkbox" checked={geselecteerd.includes(r.id)} onChange={() => toggleSel(r.id)} style={{ width: 18, height: 18 }} />
+                {r.kopmaat || "—"} · {r.lengte}mm
+              </label>
+              <button style={sx(true)} onClick={() => setRestlijst(a => a.filter(x => x.id !== r.id))}>✕</button>
+            </div>
+            <input style={si(true)} value={r.omschrijving || ""} placeholder="Omschrijving (optioneel)" onChange={e => upd(r.id, "omschrijving", e.target.value)} />
+          </div>
+        ) : (
+          <div key={r.id} style={{ display: "grid", gridTemplateColumns: "28px 2fr 2fr 3fr 28px 28px", gap: "0 8px", marginBottom: 8, alignItems: "center", background: geselecteerd.includes(r.id) ? C.greenBg : "transparent", borderRadius: 6, padding: "2px 0" }}>
+            <input type="checkbox" checked={geselecteerd.includes(r.id)} onChange={() => toggleSel(r.id)} style={{ width: 16, height: 16, cursor: "pointer" }} />
+            <div style={{ fontFamily: "monospace", fontSize: 13, fontWeight: 700, color: C.accent }}>{r.kopmaat || "—"}</div>
+            <div style={{ fontFamily: "monospace", fontSize: 13 }}>{r.lengte}mm</div>
+            <input style={si(false)} value={r.omschrijving || ""} placeholder="Omschrijving..." onChange={e => upd(r.id, "omschrijving", e.target.value)} />
+            <button title="Zet als voorraadlengte" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 12, padding: "3px 7px" }} onClick={() => {
+              const it = { id: uid(), kopmaat: r.kopmaat || "", stockLength: r.lengte, lengte: Math.floor(r.lengte * 0.8), aantal: 1 };
+              onGebruik([it]);
+              setRestlijst(a => a.filter(x => x.id !== r.id));
+            }}>→</button>
+            <button style={sx(false)} onClick={() => setRestlijst(a => a.filter(x => x.id !== r.id))}>✕</button>
+          </div>
+        ))}
+        {geselecteerd.length > 0 && (
+          <div style={{ display: "flex", gap: 10, marginTop: 14, flexWrap: "wrap", alignItems: "center" }}>
+            <span style={{ fontSize: 13, color: C.muted }}>{geselecteerd.length} geselecteerd:</span>
+            <button style={sb(C.green, "#fff", m)} onClick={gebruikGeselecteerde}>
+              → Gebruik in Kortlijst
+            </button>
+            <button style={sx(m)} onClick={() => { setRestlijst(a => a.filter(r => !geselecteerd.includes(r.id))); setGeselecteerd([]); }}>Verwijder</button>
+          </div>
+        )}
+        {restlijst.length > 0 && (
+          <div style={{ marginTop: 12 }}>
+            <button style={sd(m)} onClick={() => setRestlijst([])}>Wis hele restlijst</button>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+
+/* ─── PROJECT PLANNER ───────────────────────────── */
+
+// Find best kopmaat for a required dimension (minst afval = kleinste oppervlak dat past)
+function vindBesteKopmaten(breedte, hoogte, kopmaten) {
+  const gA = Math.min(breedte, hoogte);
+  const gB = Math.max(breedte, hoogte);
+  const matches = [];
+  for (const k of kopmaten) {
+    if (!k.kopmaat) continue;
+    const p = String(k.kopmaat).replace(/[x×\s]/gi, "x").split("x").map(Number);
+    if (p.length !== 2 || p.some(isNaN) || p.some(v => v <= 0)) continue;
+    const [kA, kB] = [Math.min(...p), Math.max(...p)];
+    if (kA >= gA && kB >= gB) {
+      // Afval = oppervlak dat overblijft per lopende meter
+      const afvalPct = ((kA * kB - gA * gB) / (kA * kB) * 100);
+      matches.push({ ...k, kA, kB, afvalPct });
+    }
+  }
+  // Sort: minste afval first
+  matches.sort((a, b) => a.afvalPct - b.afvalPct);
+  return matches;
+}
+
+function bereken1DAfval(items, stockLen, kerf, kopVerlies) {
+  // Quick simulation - return waste percentage
+  const res = cut1D(items, stockLen, kerf, kopVerlies);
+  const totalStock = res.bins.length * stockLen;
+  const totalUsed = items.reduce((s, it) => s + it.lengte * it.aantal, 0);
+  return totalStock > 0 ? (totalStock - totalUsed) / totalStock * 100 : 100;
+}
+
+function ProjectPage({ kopmaten, kerf, kopVerlies, onNaarKortlijst }) {
+  const m = useMob();
+  const [naam, setNaam] = useState("Mijn project");
+
+  // Buitenwerkse maten van het eindproduct
+  const [bwBreedte, setBwBreedte] = useState(1000);
+  const [bwHoogte,  setBwHoogte]  = useState(2315);
+
+  // Formule-opties per onderdeel
+  // formule: "handmatig" | "H" | "B" | "H-2x" | "B-2x" | "H-aftrek" | "B-aftrek"
+  const [onderdelen, setOnderdelen] = useState([
+    { id: uid(), naam: "Stijlen",       breedte: 72, hoogte: 85, formule: "H",      aftrek: 0,  lengte: 2315, aantal: 2 },
+    { id: uid(), naam: "Bovendorpel",   breedte: 72, hoogte: 85, formule: "B-2x",   aftrek: 0,  lengte: 856,  aantal: 1 },
+    { id: uid(), naam: "Stapeldorpels", breedte: 72, hoogte: 85, formule: "B-2x",   aftrek: 0,  lengte: 856,  aantal: 3 },
+  ]);
+  const [resultaat, setResultaat] = useState(null);
+  const [uitvouwen, setUitvouwen] = useState({});
+
+  // Bereken werkelijke lengte op basis van formule
+  const berekenLengte = (o) => {
+    let base;
+    switch (o.formule) {
+      case "H":        base = bwHoogte; break;
+      case "B":        base = bwBreedte; break;
+      case "H-2x":     base = bwHoogte  - 2 * o.breedte; break;
+      case "B-2x":     base = bwBreedte - 2 * o.breedte; break;
+      case "H-aftrek": base = bwHoogte  - (o.aftrek  || 0); break;
+      case "B-aftrek": base = bwBreedte - (o.aftrek  || 0); break;
+      case "H-2spon":  base = bwHoogte  - 2 * (o.sponning || 0); break;
+      case "B-2spon":  base = bwBreedte - 2 * (o.sponning || 0); break;
+      default:         return (o.lengte || 0) + (o.overmaat || 0);
+    }
+    return Math.max(1, base + (o.overmaat || 0));
+  };
+
+  const upd = (id, k, v) => setOnderdelen(a => a.map(x => {
+    if (x.id !== id) return x;
+    const updated = { ...x, [k]: v };
+    if (k !== "lengte" && updated.formule !== "handmatig") {
+      updated.lengte = berekenLengte(updated);
+    }
+    return updated;
+  }));
+
+  // Herbereken alle lengtes als buitenwerkse maten veranderen
+  const updBw = (field, val) => {
+    if (field === "breedte") setBwBreedte(val);
+    else setBwHoogte(val);
+    setOnderdelen(a => a.map(o => {
+      if (o.formule === "handmatig") return o;
+      const bwB = field === "breedte" ? val : bwBreedte;
+      const bwH = field === "hoogte"  ? val : bwHoogte;
+      let len = o.lengte;
+      let base2;
+      switch (o.formule) {
+        case "H":        base2 = bwH; break;
+        case "B":        base2 = bwB; break;
+        case "H-2x":     base2 = bwH - 2 * o.breedte; break;
+        case "B-2x":     base2 = bwB - 2 * o.breedte; break;
+        case "H-aftrek": base2 = bwH - (o.aftrek || 0); break;
+        case "B-aftrek": base2 = bwB - (o.aftrek || 0); break;
+        case "H-2spon":  base2 = bwH - 2 * (o.sponning || 0); break;
+        case "B-2spon":  base2 = bwB - 2 * (o.sponning || 0); break;
+        default:         len = (o.lengte || 0) + (o.overmaat || 0); break;
+      }
+      if (base2 !== undefined) len = Math.max(1, base2 + (o.overmaat || 0));
+      return { ...o, lengte: len };
+    }));
+    setResultaat(null);
+  };
+
+  const FORMULES = [
+    { v: "handmatig", l: "Handmatig" },
+    { v: "H",         l: "= Hoogte" },
+    { v: "B",         l: "= Breedte" },
+    { v: "H-2x",      l: "= Hoogte − 2× breedte stuk" },
+    { v: "B-2x",      l: "= Breedte − 2× breedte stuk" },
+    { v: "H-aftrek",  l: "= Hoogte − aftrek" },
+    { v: "B-aftrek",  l: "= Breedte − aftrek" },
+    { v: "H-2spon",   l: "= Hoogte − 2× sponningdiepte" },
+    { v: "B-2spon",   l: "= Breedte − 2× sponningdiepte" },
+  ];
+
+  const berekenAlle = () => {
+    // Sync lengths first
+    const synced = onderdelen.map(o => ({ ...o, lengte: berekenLengte(o) }));
+    setOnderdelen(synced);
+
+    const analyse = synced.map(o => {
+      const candidates = vindBesteKopmaten(o.breedte, o.hoogte, kopmaten);
+      if (!candidates.length) return { ...o, fout: `Geen kopmaat ≥ ${o.breedte}×${o.hoogte}mm gevonden.` };
+      const opties = [];
+      for (const km of candidates) {
+        const lengtes = km.lengtes ? km.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : [];
+        for (const sl of lengtes) {
+          if (sl < o.lengte) continue; // voorraadlengte moet voldoende zijn
+          const afvalPct = bereken1DAfval([{ id: o.id, lengte: o.lengte, aantal: o.aantal }], sl, kerf, kopVerlies);
+          opties.push({ km, sl, afvalPct });
+        }
+      }
+      opties.sort((a, b) => a.afvalPct - b.afvalPct);
+      const beste = opties[0];
+      if (!beste) return { ...o, fout: `Geen voorraadlengte ≥ ${o.lengte}mm beschikbaar.` };
+      return { ...o, besteKm: beste.km.kopmaat, besteSl: beste.sl, afvalPct: beste.afvalPct.toFixed(1), alternatieven: opties.slice(0, 5), fout: null };
+    });
+    setResultaat(analyse);
+  };
+
+  const naarKortlijst = () => {
+    if (!resultaat) return;
+    const items = resultaat.filter(r => !r.fout).map(r => ({
+      id: uid(), kopmaat: r.besteKm, stockLength: r.besteSl, lengte: r.lengte, aantal: r.aantal,
+    }));
+    onNaarKortlijst(items);
+  };
+
+  const toggleUitv = (id) => setUitvouwen(s => ({ ...s, [id]: !s[id] }));
+  const heeftKopmaten = kopmaten.filter(k => k.kopmaat).length > 0;
+
+  const formulaLabel = (o) => {
+    const len = berekenLengte(o);
+    if (o.formule === "handmatig") return null;
+    return `= ${len}mm`;
+  };
+
+  return (
+    <div>
+      {/* Buitenwerkse maten */}
+      <Card title="Buitenwerkse maten">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>
+          Voer de <strong>buitenwerkse maten</strong> van het eindproduct in (breedte × hoogte). De lengtes van onderdelen worden automatisch berekend.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: m ? "1fr 1fr" : "1fr 1fr 1fr", gap: 14 }}>
+          <div>
+            <Lbl>Breedte buitenwerks (mm)</Lbl>
+            <input type="number" style={si(m)} value={bwBreedte} min={1} onChange={e => updBw("breedte", +e.target.value)} />
+          </div>
+          <div>
+            <Lbl>Hoogte buitenwerks (mm)</Lbl>
+            <input type="number" style={si(m)} value={bwHoogte} min={1} onChange={e => updBw("hoogte", +e.target.value)} />
+          </div>
+          {!m && (
+            <div style={{ background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 8, padding: "10px 14px", display: "flex", alignItems: "center" }}>
+              <div>
+                <div style={{ fontSize: 11, color: C.muted, letterSpacing: 1, textTransform: "uppercase" }}>Buitenwerks</div>
+                <div style={{ fontSize: 18, fontWeight: 700, fontFamily: "monospace", color: C.accent }}>{bwBreedte} × {bwHoogte} mm</div>
+              </div>
+            </div>
+          )}
+        </div>
+      </Card>
+
+      {/* Visueel diagram */}
+      {(bwBreedte > 0 && bwHoogte > 0) && (() => {
+        const W = 240, H = Math.round(W * bwHoogte / bwBreedte);
+        const clampH = Math.min(H, 320);
+        const scW = W / bwBreedte, scH = clampH / bwHoogte;
+        const sc = Math.min(scW, scH);
+        const svgW = bwBreedte * sc, svgH = bwHoogte * sc;
+        // Draw parts as colored overlays
+        const parts = onderdelen.map((o, i) => {
+          const len = berekenLengte(o);
+          return { ...o, len, color: COLORS[i % COLORS.length] };
+        });
+        return (
+          <Card title="Maatschets">
+            <div style={{ display: "flex", gap: 20, flexWrap: "wrap", alignItems: "flex-start" }}>
+              <div>
+                <div style={{ fontSize: 11, color: C.faint, marginBottom: 6, fontFamily: "monospace" }}>Buitenwerks: {bwBreedte} × {bwHoogte}mm</div>
+                <svg width={svgW} height={svgH} style={{ display: "block", border: `2px solid ${C.border}`, borderRadius: 4, background: C.inpBg }}>
+                  {/* Outer frame */}
+                  <rect x={0} y={0} width={svgW} height={svgH} fill={C.inpBg} stroke={C.border} strokeWidth={1.5} />
+                  {/* Parts as labels along the side */}
+                  {parts.map((p, i) => {
+                    const barH = 8, barY = 6 + i * (barH + 3);
+                    const barW = (p.len / bwHoogte) * svgH;
+                    return (
+                      <g key={p.id}>
+                        <rect x={2} y={barY} width={Math.min(barW, svgW - 4)} height={barH} fill={p.color} rx={2} opacity={0.7} />
+                        {svgW > 120 && (
+                          <text x={Math.min(barW, svgW - 4) + 4} y={barY + 6} fontSize={7} fill={C.muted} fontFamily="monospace">{p.naam} {p.len}mm</text>
+                        )}
+                      </g>
+                    );
+                  })}
+                  {/* Dimension label */}
+                  <text x={svgW / 2} y={svgH - 3} textAnchor="middle" fontSize={8} fill={C.muted} fontFamily="monospace">{bwBreedte}mm</text>
+                  <text x={3} y={svgH / 2} fontSize={8} fill={C.muted} fontFamily="monospace" transform={`rotate(-90, 8, ${svgH/2})`}>{bwHoogte}mm</text>
+                </svg>
+              </div>
+              <div style={{ flex: 1, minWidth: 160 }}>
+                <div style={{ fontSize: 11, color: C.faint, letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>Onderdelen</div>
+                {parts.map(p => (
+                  <div key={p.id} style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 5 }}>
+                    <div style={{ width: 12, height: 12, borderRadius: 2, background: p.color, flexShrink: 0, opacity: 0.85 }} />
+                    <div style={{ fontSize: 13, color: C.text }}>{p.naam || "(naamloos)"}</div>
+                    <div style={{ fontSize: 12, fontFamily: "monospace", color: C.muted, marginLeft: "auto" }}>
+                      {p.breedte}×{p.hoogte}mm · <strong>{p.len}mm</strong>{p.overmaat ? ` (+${p.overmaat}mm)` : ""} ×{p.aantal}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Card>
+        );
+      })()}
+
+      {/* Onderdelen */}
+      <Card title="Onderdelen">
+        <p style={{ fontSize: 14, color: C.muted, marginBottom: 14, lineHeight: 1.6 }}>
+          Stel per onderdeel de <strong>kopmaat</strong> (breedte × hoogte) en de <strong>lengte-formule</strong> in. De werkelijke lengte wordt automatisch berekend.
+        </p>
+        {!heeftKopmaten && <Warn msg="Voeg eerst kopmaten toe via Instellingen." />}
+
+        {onderdelen.map(o => {
+          const calcLen = berekenLengte(o);
+          const needsAftrek  = o.formule === "H-aftrek"  || o.formule === "B-aftrek";
+          const needsSponning = o.formule === "H-2spon"   || o.formule === "B-2spon";
+          return m ? (
+            <div key={o.id} style={{ background: C.inpBg, border: `1px solid ${C.border}`, borderRadius: 10, padding: 14, marginBottom: 12 }}>
+              <MobField label="Naam onderdeel">
+                <input style={si(true)} value={o.naam} onChange={e => upd(o.id, "naam", e.target.value)} placeholder="Stijl links" />
+              </MobField>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                <MobField label="Breedte kopmaat (mm)"><input type="number" style={si(true)} value={o.breedte} min={1} onChange={e => upd(o.id, "breedte", +e.target.value)} /></MobField>
+                <MobField label="Hoogte kopmaat (mm)"><input type="number" style={si(true)} value={o.hoogte} min={1} onChange={e => upd(o.id, "hoogte", +e.target.value)} /></MobField>
+              </div>
+              <MobField label="Lengte-formule">
+                <select style={ss(true)} value={o.formule} onChange={e => upd(o.id, "formule", e.target.value)}>
+                  {FORMULES.map(f => <option key={f.v} value={f.v}>{f.l}</option>)}
+                </select>
+              </MobField>
+              {needsAftrek && (
+                <MobField label="Aftrek (mm)"><input type="number" style={si(true)} value={o.aftrek || 0} min={0} onChange={e => upd(o.id, "aftrek", +e.target.value)} /></MobField>
+              )}
+              {needsSponning && (
+                <MobField label="Sponningdiepte (mm)"><input type="number" style={si(true)} value={o.sponning || 0} min={0} onChange={e => upd(o.id, "sponning", +e.target.value)} /></MobField>
+              )}
+              <MobField label="Overmaat verbinding (mm)">
+                <input type="number" style={si(true)} value={o.overmaat || 0} min={0} placeholder="0" onChange={e => upd(o.id, "overmaat", +e.target.value)} />
+              </MobField>
+              {o.formule === "handmatig" ? (
+                <MobField label="Lengte (mm)"><input type="number" style={si(true)} value={o.lengte} min={1} onChange={e => upd(o.id, "lengte", +e.target.value)} /></MobField>
+              ) : (
+                <div style={{ background: C.greenBg, border: "1px solid #B0D9C0", borderRadius: 7, padding: "8px 12px", marginBottom: 10, fontFamily: "monospace", fontSize: 14, color: C.green, fontWeight: 700 }}>
+                  Lengte: {calcLen}mm
+                </div>
+              )}
+              <MobField label="Aantal"><Stepper value={o.aantal} onChange={v => upd(o.id, "aantal", v)} /></MobField>
+              <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 8 }}>
+                <button style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 13, padding: "5px 10px" }} onClick={() => setOnderdelen(a => [...a, { ...o, id: uid() }])}>⎘</button>
+                <button style={sx(true)} onClick={() => setOnderdelen(a => a.filter(x => x.id !== o.id))}>Verwijder</button>
+              </div>
+            </div>
+          ) : (
+            <div key={o.id} style={{ marginBottom: 8 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "2fr 80px 80px 2fr 90px 80px 28px 28px", gap: "0 6px", alignItems: "center", marginBottom: needsAftrek ? 4 : 0 }}>
+                <input style={si(false)} value={o.naam} onChange={e => upd(o.id, "naam", e.target.value)} placeholder="Naam onderdeel" />
+                <input type="number" style={si(false)} value={o.breedte} min={1} title="Breedte kopmaat" onChange={e => upd(o.id, "breedte", +e.target.value)} />
+                <input type="number" style={si(false)} value={o.hoogte} min={1} title="Hoogte kopmaat" onChange={e => upd(o.id, "hoogte", +e.target.value)} />
+                <select style={ss(false)} value={o.formule} onChange={e => upd(o.id, "formule", e.target.value)}>
+                  {FORMULES.map(f => <option key={f.v} value={f.v}>{f.l}</option>)}
+                </select>
+                {/* Length display or manual input */}
+                {o.formule === "handmatig"
+                  ? <input type="number" style={si(false)} value={o.lengte} min={1} onChange={e => upd(o.id, "lengte", +e.target.value)} />
+                  : <div style={{ background: C.greenBg, border: "1px solid #B0D9C0", borderRadius: 7, padding: "7px 10px", fontSize: 13, fontFamily: "monospace", color: C.green, fontWeight: 700, textAlign: "center" }}>{calcLen}mm</div>
+                }
+                <Stepper value={o.aantal} onChange={v => upd(o.id, "aantal", v)} />
+                <button title="Dupliceer" style={{ ...sx(false), color: C.accent, borderColor: C.accent, fontSize: 13, padding: "4px 7px" }} onClick={() => setOnderdelen(a => [...a, { ...o, id: uid() }])}>⎘</button>
+                <button style={sx(false)} onClick={() => setOnderdelen(a => a.filter(x => x.id !== o.id))}>✕</button>
+              </div>
+              {needsAftrek && (
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 12, color: C.faint, minWidth: 50 }}>Aftrek:</span>
+                  <input type="number" style={{ ...si(false), width: 100 }} value={o.aftrek || 0} min={0} onChange={e => upd(o.id, "aftrek", +e.target.value)} />
+                  <span style={{ fontSize: 12, color: C.faint }}>mm + overmaat verbinding:</span>
+                  <input type="number" style={{ ...si(false), width: 80 }} value={o.overmaat || 0} min={0} placeholder="0" onChange={e => upd(o.id, "overmaat", +e.target.value)} />
+                  <span style={{ fontSize: 12, color: C.faint }}>mm</span>
+                </div>
+              )}
+              {needsSponning && (
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 12, color: C.faint, minWidth: 50 }}>Sponning:</span>
+                  <input type="number" style={{ ...si(false), width: 100 }} value={o.sponning || 0} min={0} onChange={e => upd(o.id, "sponning", +e.target.value)} />
+                  <span style={{ fontSize: 12, color: C.faint }}>mm + overmaat verbinding:</span>
+                  <input type="number" style={{ ...si(false), width: 80 }} value={o.overmaat || 0} min={0} placeholder="0" onChange={e => upd(o.id, "overmaat", +e.target.value)} />
+                  <span style={{ fontSize: 12, color: C.faint }}>mm</span>
+                </div>
+              )}
+              {!needsAftrek && !needsSponning && o.formule !== "handmatig" && (
+                <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, flexWrap: "wrap" }}>
+                  <span style={{ fontSize: 12, color: C.faint }}>Overmaat verbinding:</span>
+                  <input type="number" style={{ ...si(false), width: 80 }} value={o.overmaat || 0} min={0} placeholder="0" onChange={e => upd(o.id, "overmaat", +e.target.value)} />
+                  <span style={{ fontSize: 12, color: C.faint }}>mm</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        {/* Desktop header above rows */}
+        {!m && onderdelen.length > 0 && (
+          <div style={{ display: "grid", gridTemplateColumns: "2fr 80px 80px 2fr 90px 80px 28px 28px", gap: "0 6px", marginBottom: 6, marginTop: 2 }}>
+            {["Onderdeel", "Breedte", "Hoogte", "Lengte-formule", "Lengte", "Aantal", "", ""].map((h, i) => <Lbl key={i}>{h}</Lbl>)}
+          </div>
+        )}
+
+        {onderdelen.length === 0 && <div style={{ color: C.faint, fontSize: 14, marginBottom: 12, fontStyle: "italic" }}>Nog geen onderdelen.</div>}
+        <div style={{ display: "flex", gap: 10, marginTop: 14, flexWrap: "wrap" }}>
+          <button style={sd(m)} onClick={() => {
+            const nieuw = { id: uid(), naam: "", breedte: 72, hoogte: 85, formule: "H", aftrek: 0, lengte: bwHoogte, aantal: 1 };
+            setOnderdelen(a => [...a, nieuw]);
+          }}>+ Onderdeel</button>
+          <button style={sb(C.accent, "#fff", m)} onClick={berekenAlle} disabled={!heeftKopmaten || !onderdelen.length}>
+            🔍 Analyseer project
+          </button>
+        </div>
+      </Card>
+
+      {/* Resultaat */}
+      {resultaat && (
+        <Card title="Analyse — Beste kopmaten">
+          <p style={{ fontSize: 14, color: C.muted, marginBottom: 16, lineHeight: 1.6 }}>
+            Per onderdeel de beste kopmaat op basis van minst afval. Klik open voor alternatieven.
+          </p>
+          <div style={{ marginBottom: 20 }}>
+            {resultaat.map(r => (
+              <div key={r.id} style={{ marginBottom: 8 }}>
+                {r.fout ? <Err msg={`${r.naam}: ${r.fout}`} /> : (
+                  <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, overflow: "hidden" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px", cursor: "pointer", flexWrap: "wrap" }} onClick={() => toggleUitv(r.id)}>
+                      <div style={{ flex: 1, minWidth: 120 }}>
+                        <div style={{ fontSize: 14, fontWeight: 700, color: C.text }}>{r.naam}</div>
+                        <div style={{ fontSize: 11, color: C.faint, fontFamily: "monospace" }}>{r.breedte}×{r.hoogte}mm · {r.lengte}mm · ×{r.aantal}</div>
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+                        <div style={{ background: C.greenBg, border: "1px solid #B0D9C0", borderRadius: 7, padding: "6px 12px", textAlign: "center" }}>
+                          <div style={{ fontSize: 11, color: C.green, letterSpacing: 1 }}>BESTE MATCH</div>
+                          <div style={{ fontSize: 15, fontWeight: 700, fontFamily: "monospace", color: C.green }}>{r.besteKm}</div>
+                          <div style={{ fontSize: 11, color: C.muted, fontFamily: "monospace" }}>{r.besteSl}mm voorraad</div>
+                        </div>
+                        <div style={{ background: +r.afvalPct < 15 ? C.greenBg : C.accentBg, border: `1px solid ${+r.afvalPct < 15 ? "#B0D9C0" : "#EDD9B0"}`, borderRadius: 7, padding: "6px 12px", textAlign: "center" }}>
+                          <div style={{ fontSize: 11, color: C.muted, letterSpacing: 1 }}>AFVAL</div>
+                          <div style={{ fontSize: 18, fontWeight: 700, fontFamily: "monospace", color: +r.afvalPct < 15 ? C.green : C.accent }}>{r.afvalPct}%</div>
+                        </div>
+                        <div style={{ fontSize: 12, color: C.faint }}>{uitvouwen[r.id] ? "▲" : "▼"} {r.alternatieven.length} opties</div>
+                      </div>
+                    </div>
+                    {uitvouwen[r.id] && (
+                      <div style={{ borderTop: `1px solid ${C.border}`, background: C.inpBg, padding: "10px 16px" }}>
+                        <div style={{ fontSize: 11, color: C.faint, letterSpacing: 1, textTransform: "uppercase", marginBottom: 8 }}>Alle opties — minst afval eerst</div>
+                        {r.alternatieven.map((opt, i) => (
+                          <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6, padding: "6px 10px", borderRadius: 6, background: i === 0 ? C.greenBg : C.surface, border: `1px solid ${i === 0 ? "#B0D9C0" : C.border}` }}>
+                            <div style={{ fontSize: 13, fontFamily: "monospace", fontWeight: 700, color: i === 0 ? C.green : C.text, flex: 1 }}>
+                              {opt.km.kopmaat}
+                              {opt.km.omschrijving && <span style={{ fontSize: 11, color: C.faint, fontWeight: 400, marginLeft: 6 }}>{opt.km.omschrijving}</span>}
+                            </div>
+                            <div style={{ fontSize: 12, fontFamily: "monospace", color: C.muted }}>{opt.sl}mm voorraad</div>
+                            <div style={{ fontSize: 13, fontFamily: "monospace", fontWeight: 700, color: opt.afvalPct < 15 ? C.green : C.accent, minWidth: 52, textAlign: "right" }}>{opt.afvalPct.toFixed(1)}% afval</div>
+                            {i === 0 && <div style={{ fontSize: 10, background: C.green, color: "#fff", borderRadius: 4, padding: "2px 6px" }}>BEST</div>}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {resultaat.some(r => !r.fout) && (
+            <div style={{ background: C.accentBg, border: "1px solid #EDD9B0", borderRadius: 10, padding: 14, marginBottom: 16 }}>
+              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 2, color: C.muted, textTransform: "uppercase", marginBottom: 10 }}>Samenvatting zaaglijst</div>
+              {Object.values(resultaat.filter(r => !r.fout).reduce((acc, r) => {
+                const k = `${r.besteKm}|${r.besteSl}`;
+                if (!acc[k]) acc[k] = { km: r.besteKm, sl: r.besteSl, onderdelen: [] };
+                acc[k].onderdelen.push(r);
+                return acc;
+              }, {})).map((g, i) => (
+                <div key={i} style={{ marginBottom: 8 }}>
+                  <div style={{ fontSize: 13, fontWeight: 700, color: C.accent, fontFamily: "monospace", marginBottom: 4 }}>{g.km} — voorraad {g.sl}mm</div>
+                  {g.onderdelen.map((o, j) => (
+                    <div key={j} style={{ fontSize: 12, color: C.muted, fontFamily: "monospace", marginLeft: 14 }}>
+                      {o.naam}: {o.lengte}mm × {o.aantal}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+            <button style={sb(C.green, "#fff", m)} onClick={naarKortlijst}>→ Stuur naar Kortlijst</button>
+            <button style={sd(m)} onClick={() => setResultaat(null)}>Opnieuw</button>
+          </div>
+        </Card>
+      )}
+    </div>
+  );
+}
+
+  const upd = (id, k, v) => setOnderdelen(a => a.map(x => x.id === id ? { ...x, [k]: v } : x));
+
+/* ─── MAIN APP ──────────────────────────────────── */
+function App() {
+  const [tab, setTab] = useState("project");
+  const m = useMob();
+
+  // ── Herstel auto-save of gebruik defaults ──
+  const SAVE_VERSION = 2; // verhoog dit als defaults veranderen
+  const _raw = (() => { try { return JSON.parse(localStorage.getItem("zaagplan_autosave") || "null"); } catch { return null; } })();
+  const _saved = (_raw && _raw._v === SAVE_VERSION) ? _raw : null;
+  const _def_km = [
+    { id: uid(), kopmaat: "43x140", omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "60x85",  omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "72x85",  omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "60x120", omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "60x144", omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "72x120", omschrijving: "", lengtes: "5900" },
+    { id: uid(), kopmaat: "72x144", omschrijving: "", lengtes: "5900" },
+  ];
+
+  const [kerf,        setKerf]        = useState(_saved?.kerf        ?? 3);
+  const [kopVerlies,  setKopVerlies]  = useState(_saved?.kopVerlies  ?? 40);
+  const [restlijst,   setRestlijst]   = useState(_saved?.restlijst   ?? []);
+  const [projectNaam, setProjectNaam] = useState(_saved?.projectNaam ?? "Mijn project");
+  const [opgeslagen,  setOpgeslagen]  = useState(() => { try { return JSON.parse(localStorage.getItem("zaagplan_projecten") || "[]"); } catch { return []; } });
+  const [kopmaten,    setKopmaten]    = useState(_saved?.kopmaten    ?? _def_km);
+  const [platen,      setPlaten]      = useState(_saved?.platen      ?? [
+    { id: uid(), naam: "MDF 18mm",       breedte: 2440, hoogte: 1220 },
+    { id: uid(), naam: "Multiplex 12mm", breedte: 2440, hoogte: 1220 },
+  ]);
+  const [kItems,   setKItems]   = useState(_saved?.kItems   ?? []);
+  const [kResults, setKResults] = useState(null);
+  const [lItems,   setLItems]   = useState(_saved?.lItems   ?? []);
+  const [lResults, setLResults] = useState(null);
+  const [pPlaatId, setPPlaatId] = useState(_saved?.pPlaatId ?? "");
+  const [pItems,   setPItems]   = useState(_saved?.pItems   ?? []);
+  const [pResults, setPResults] = useState(null);
+
+  // Unified zaaglijst (merges kItems + lItems into one list)
+  const [zItems, setZItems] = useState(() => {
+    if (_saved?.zItems) return _saved.zItems;
+    return [];
+  });
+  const [zResults, setZResults] = useState(null);
+
+  const calcKortlijst = () => {
+    const groups = {};
+    kItems.forEach(it => {
+      if (!it.lengte || !it.aantal) return;
+      const km = it.kopmaat || "Onbekend";
+      const sl = it.stockLength || 0;
+      if (!sl) return;
+      const k = `${km}|${sl}`;
+      if (!groups[k]) groups[k] = { kopmaat: km, stockLen: sl, items: [] };
+      groups[k].items.push(it);
+    });
+    const res = Object.values(groups).map(g => ({ kopmaat: g.kopmaat, stockLen: g.stockLen, ...cut1D(g.items, g.stockLen, kerf, kopVerlies) }));
+    setKResults(res.length ? res : [{ kopmaat: "—", stockLen: 0, bins: [], errs: ["Geen geldige regels gevonden. Controleer kopmaat, voorraadlengte, lengte en aantal."] }]);
+  };
+
+  const calcLatten = () => {
+    const groups = {};
+    lItems.forEach(it => {
+      const km = it.matchedKopmaat || it.kopmaat;
+      if (!it.lengte || !it.aantal) return;
+      const sl = it.stockLength || 0;
+      if (!km || !sl) return;
+      const k = `${km}|${sl}`;
+      if (!groups[k]) groups[k] = { kopmaat: km, stockLen: sl, items: [] };
+      groups[k].items.push(it);
+    });
+    const res = Object.values(groups).map(g => ({ kopmaat: g.kopmaat, stockLen: g.stockLen, ...cut1D(g.items, g.stockLen, kerf, kopVerlies) }));
+    setLResults(res.length ? res : [{ kopmaat: "—", stockLen: 0, bins: [], errs: ["Geen geldige regels gevonden. Vul gewenste kopmaat en voorraadlengte in."] }]);
+  };
+
+  const calcZaaglijst = () => {
+    const groups = {};
+    zItems.forEach(it => {
+      if (!it.lengte || !it.aantal) return;
+      const km = it.mode === "auto"
+        ? (it.matchedKopmaat || matchKm(it.gewensteMaat, kopmaten)?.kopmaat || "")
+        : (it.kopmaat || "");
+      const sl = it.stockLength || 0;
+      if (!km || !sl) return;
+      const k = `${km}|${sl}`;
+      if (!groups[k]) groups[k] = { kopmaat: km, stockLen: sl, items: [] };
+      groups[k].items.push(it);
+    });
+    const res = Object.values(groups).map(g => ({ kopmaat: g.kopmaat, stockLen: g.stockLen, ...cut1D(g.items, g.stockLen, kerf, kopVerlies) }));
+    setZResults(res.length ? res : [{ kopmaat: "—", stockLen: 0, bins: [], errs: ["Geen geldige regels. Controleer kopmaat, voorraad en lengte."] }]);
+  };
+
+  const calcPlaat = () => {
+    const p = platen.find(p => p.id === pPlaatId);
+    if (!p) return;
+    setPResults({ plaat: p, ...cut2D(pItems, p.breedte, p.hoogte, kerf) });
+  };
+
+  // ── Auto-save: bewaar huidige staat bij elke wijziging ──
+  useEffect(() => {
+    const state = { _v: SAVE_VERSION, kerf, kopVerlies, kopmaten, platen, kItems, lItems, zItems, pItems, pPlaatId, restlijst, projectNaam };
+    try { localStorage.setItem("zaagplan_autosave", JSON.stringify(state)); } catch {}
+  }, [kerf, kopVerlies, kopmaten, platen, kItems, lItems, pItems, pPlaatId, restlijst, projectNaam]);
+
+  const saveProject = () => {
+    const project = {
+      id: uid(), naam: projectNaam, datum: new Date().toLocaleDateString("nl-NL"),
+      kerf, kopVerlies, kopmaten, platen, kItems, lItems, zItems, pItems, pPlaatId, restlijst,
+    };
+    const list = [...opgeslagen.filter(p => p.naam !== projectNaam), project].slice(-10);
+    setOpgeslagen(list);
+    try { localStorage.setItem("zaagplan_projecten", JSON.stringify(list)); } catch {}
+  };
+
+  const loadProject = (p) => {
+    setProjectNaam(p.naam);
+    setKerf(p.kerf || 3); setKopVerlies(p.kopVerlies || 40);
+    setKopmaten(p.kopmaten || []); setPlaten(p.platen || []);
+    setKItems(p.kItems || []); setLItems(p.lItems || []);
+    setZItems(p.zItems || p.kItems || []);
+    setPItems(p.pItems || []); setPPlaatId(p.pPlaatId || "");
+    setRestlijst(p.restlijst || []);
+    setKResults(null); setLResults(null); setZResults(null); setPResults(null);
+  };
+
+  const deleteProject = (id) => {
+    const list = opgeslagen.filter(p => p.id !== id);
+    setOpgeslagen(list);
+    try { localStorage.setItem("zaagplan_projecten", JSON.stringify(list)); } catch {}
+  };
+
+  // Restlijst: voeg resten toe vanuit zaagplan resultaten
+  const slaRestenOp = (results) => {
+    if (!results) return;
+    const nieuweResten = results.flatMap(r =>
+      r.bins.filter(b => b.rem > 50).map(b => ({
+        id: uid(), kopmaat: r.kopmaat, lengte: b.rem,
+        omschrijving: `Rest van zaagplan ${new Date().toLocaleDateString("nl-NL")}`,
+      }))
+    );
+    if (nieuweResten.length) setRestlijst(r => [...r, ...nieuweResten]);
+    return nieuweResten.length;
+  };
+
+  const handlePrint = () => {
+    const d = new Date().toLocaleDateString("nl-NL");
+    const mkBar = (bins) => bins.map((bin, bi) => {
+      const sc = 540 / bin.stockLen; let cx = 0;
+      const segs = bin.cuts.map((c, i) => {
+        const kw = i ? kerf * sc : 0, x = cx + kw, w = c.len * sc; cx = x + w;
+        const col = COLORS[i % COLORS.length];
+        return `<rect x="${x}" y="3" width="${Math.max(w-.5,0)}" height="38" fill="${col}" rx="2" opacity=".85"/>${w>26?`<text x="${x+w/2}" y="26" text-anchor="middle" font-size="10" fill="white" font-family="monospace" font-weight="700">${c.len}</text>`:""}`;
+      }).join("");
+      const wx = cx, ww = 540 - cx;
+      const waste = ww > 2 ? `<rect x="${wx}" y="3" width="${ww}" height="38" fill="#EDE9E3" rx="2"/>${ww>30?`<text x="${wx+ww/2}" y="26" text-anchor="middle" font-size="9" fill="#aaa" font-family="monospace">${bin.rem}mm</text>`:""}` : "";
+      return `<div class="bin"><div class="bi">Stuk #${bi+1} · ${bin.cuts.map(c=>c.len+"mm").join(" + ")} · Afval: ${bin.rem}mm (${(bin.rem/bin.stockLen*100).toFixed(1)}%)</div><svg viewBox="0 0 540 44" style="width:100%;display:block;border:1px solid #ddd;border-radius:4px"><rect width="540" height="44" fill="#F9F6F2"/>${segs}${waste}</svg></div>`;
+    }).join("");
+
+    let body = "";
+    if (kResults && kResults.length) {
+      body += `<div class="sec"><div class="sech">Kortlijst</div>${kResults.map(r=>`<div class="grp">${r.kopmaat} — ${r.stockLen}mm <span>(${r.bins.length} stuk${r.bins.length!==1?"s":""})</span></div>${mkBar(r.bins)}`).join("")}</div>`;
+    }
+    if (lResults && lResults.length) {
+      body += `<div class="sec"><div class="sech">Latten</div>${lResults.map(r=>`<div class="grp">${r.kopmaat} — ${r.stockLen}mm <span>(${r.bins.length} stuk${r.bins.length!==1?"s":""})</span></div>${mkBar(r.bins)}`).join("")}</div>`;
+    }
+    if (pResults) {
+      const sheets = pResults.sheets.map((s, si) => {
+        const sc = Math.min(520/s.w, 280/s.h), W = s.w*sc, H = s.h*sc;
+        const used = s.cuts.reduce((a,c)=>a+c.w*c.h,0);
+        const waste = ((1-used/(s.w*s.h))*100).toFixed(1);
+        const rects = s.cuts.map((c,ci)=>`<rect x="${c.x*sc}" y="${c.y*sc}" width="${c.w*sc-.5}" height="${c.h*sc-.5}" fill="${COLORS[ci%COLORS.length]}" stroke="white" stroke-width="1" rx="2" opacity=".88"/>${c.w*sc>28&&c.h*sc>14?`<text x="${(c.x+c.w/2)*sc}" y="${(c.y+c.h/2)*sc+4}" text-anchor="middle" font-size="9" fill="white" font-family="monospace" font-weight="600">${c.label}</text>`:""}`).join("");
+        return `<div class="bin"><div class="bi">Plaat #${si+1} · ${s.w}x${s.h}mm · Afval: ${waste}%</div><svg width="${W}" height="${H}" style="display:block;border:1px solid #ddd;border-radius:5px"><rect width="${W}" height="${H}" fill="#F9F6F2"/>${rects}</svg></div>`;
+      }).join("");
+      body += `<div class="sec"><div class="sech">Plaatmateriaal — ${pResults.plaat.naam}</div><p style="font-size:12px;color:#7A7468;margin-bottom:10px">${pResults.sheets.length} plaat${pResults.sheets.length!==1?"en":""} benodigd</p>${sheets}</div>`;
+    }
+    if (!body) body = `<p style="color:#aaa;font-style:italic">Geen berekeningen beschikbaar.</p>`;
+
+    const html = `<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><title>ZaagPlan ${d}</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:white;color:#1E1A15;font-family:Arial,sans-serif;padding:32px;max-width:820px;margin:0 auto}
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2.5px solid #C07A18;padding-bottom:10px;margin-bottom:22px}
+.logo{font-size:22px;font-weight:700;letter-spacing:3px;color:#C07A18}
+.meta{font-size:11px;color:#aaa;text-align:right;line-height:1.8}
+.sec{margin-bottom:26px}
+.sech{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#7A7468;border-bottom:1px solid #DDD9D2;padding-bottom:5px;margin-bottom:12px}
+.grp{font-size:13px;font-weight:700;color:#C07A18;margin:12px 0 6px}
+.grp span{font-size:11px;color:#aaa;font-weight:400;margin-left:5px}
+.bin{margin-bottom:12px}
+.bi{font-size:10px;color:#aaa;font-family:monospace;margin-bottom:4px}
+.pbtn{position:fixed;top:14px;right:14px;background:#C07A18;color:white;border:none;padding:10px 20px;border-radius:6px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.5px}
+@media print{.pbtn{display:none}}
+</style></head><body>
+<button class="pbtn" onclick="window.print()">🖨 Afdrukken / Opslaan als PDF</button>
+<div class="hdr">
+  <div><div class="logo">🪚 ZAAGPLAN</div><div style="font-size:9px;color:#aaa;letter-spacing:2px;margin-top:2px">HOUT OPTIMALISATIE</div></div>
+  <div class="meta"><div>${d}</div><div>Zaagblad: ${kerf}mm</div></div>
+</div>
+${body}
+</body></html>`;
+
+    try {
+      const blob = new Blob([html], { type: "text/html" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `ZaagPlan_${d.replace(/\//g, "-")}.html`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+    } catch (e) {
+      alert("Download mislukt: " + e.message);
+    }
+  };
+
+  const handleEmail = () => {
+    const d = new Date().toLocaleDateString("nl-NL");
+    let body = `ZAAGPLAN - ${d}\n${"=".repeat(40)}\n\n`;
+    if (kResults && kResults.length) { body += "KORTLIJST\n" + "-".repeat(30) + "\n"; kResults.forEach(r => { body += `\n${r.kopmaat} (${r.stockLen}mm): ${r.bins.length} stuk(s)\n`; r.bins.forEach((b, i) => { body += `  Stuk ${i + 1}: ${b.cuts.map(c => c.len + "mm").join(" + ")} - Afval: ${b.rem}mm\n`; }); }); body += "\n"; }
+    if (lResults && lResults.length) { body += "LATTEN\n" + "-".repeat(30) + "\n"; lResults.forEach(r => { body += `\n${r.kopmaat} (${r.stockLen}mm): ${r.bins.length} stuk(s)\n`; r.bins.forEach((b, i) => { body += `  Stuk ${i + 1}: ${b.cuts.map(c => c.len + "mm").join(" + ")} - Afval: ${b.rem}mm\n`; }); }); body += "\n"; }
+    if (pResults) { body += "PLAATMATERIAAL\n" + "-".repeat(30) + "\n"; body += `\n${pResults.plaat.naam}: ${pResults.sheets.length} plaat/platen\n`; pResults.sheets.forEach((s, i) => { const u = s.cuts.reduce((a, c) => a + c.w * c.h, 0); body += `  Plaat ${i + 1}: afval ${((1 - u / (s.w * s.h)) * 100).toFixed(1)}%\n`; s.cuts.forEach(c => { body += `    - ${c.label} (${c.w}x${c.h}mm)\n`; }); }); }
+    if (!kResults?.length && !lResults?.length && !pResults) body += "Geen berekeningen beschikbaar.";
+    window.location.href = `mailto:?subject=Zaagplan ${d}&body=${encodeURIComponent(body)}`;
+  };
+
+
+  const TABS = [
+    { id: "project",        icon: "🏗️", label: "Project" },
+    { id: "zaaglijst",      icon: "📋", label: m ? "Lijst"  : "Zaaglijst" },
+    { id: "plaatmateriaal", icon: "🟫", label: m ? "Plaat"  : "Plaatmateriaal" },
+    { id: "restlijst",      icon: "♻️", label: m ? "Resten" : "Restlijst" },
+    { id: "instellingen",   icon: "⚙️", label: m ? "Stel."  : "Instellingen" },
+  ];
+
+  return (
+    <>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Roboto+Mono:wght@400;600&display=swap');
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{background:${C.bg};color:${C.text};font-family:'Rajdhani',sans-serif;-webkit-text-size-adjust:100%}
+        input,select,button{font-family:inherit;-webkit-tap-highlight-color:transparent}
+        select option{background:#fff;color:${C.text}}
+        input[type=number]{-moz-appearance:textfield}
+        input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
+        input:focus,select:focus{outline:2px solid ${C.accent};outline-offset:1px}
+        select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B0A99E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px!important}
+      `}</style>
+      <div style={{ minHeight: "100vh", background: C.bg }}>
+
+        {/* HEADER */}
+        <header style={{ background: C.header, borderBottom: `1px solid ${C.border}`, padding: m ? "12px 14px" : "13px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", boxShadow: "0 1px 6px rgba(0,0,0,.07)", position: "sticky", top: 0, zIndex: 100 }}>
+          <div>
+            <div style={{ fontSize: m ? 20 : 24, fontWeight: 700, letterSpacing: 2, color: C.accent, textTransform: "uppercase", lineHeight: 1 }}>🪚 ZaagPlan</div>
+            {!m && <div style={{ fontSize: 10, color: C.faint, letterSpacing: 2.5, marginTop: 2 }}>HOUT OPTIMALISATIE · MINIMAAL AFVAL</div>}
+          </div>
+          <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            {!m && <span style={{ fontSize: 11, color: C.faint, fontFamily: "monospace" }}>zaagblad {kerf}mm · kopverlies {kopVerlies}mm · auto-opgeslagen</span>}
+          </div>
+        </header>
+
+        {/* TABS */}
+        <nav style={{ background: C.header, borderBottom: `1px solid ${C.border}`, display: "flex", position: "sticky", top: m ? 55 : 62, zIndex: 99 }}>
+          {TABS.map(t => (
+            <button key={t.id} onClick={() => setTab(t.id)} style={{
+              flex: m ? 1 : "none", padding: m ? "10px 4px" : "10px 22px",
+              background: "transparent", border: "none",
+              borderBottom: tab === t.id ? `3px solid ${C.accent}` : "3px solid transparent",
+              color: tab === t.id ? C.accent : C.muted,
+              cursor: "pointer", fontFamily: "'Rajdhani',sans-serif",
+              fontSize: m ? 11 : 13, fontWeight: 700, textTransform: "uppercase",
+              display: "flex", flexDirection: "column", alignItems: "center", gap: 2,
+            }}>
+              <span style={{ fontSize: m ? 18 : 14 }}>{t.icon}</span>
+              <span>{t.label}</span>
+            </button>
+          ))}
+        </nav>
+
+        {/* CONTENT */}
+        <main style={{ maxWidth: 960, margin: "0 auto", padding: m ? "12px 10px" : "22px 20px" }}>
+          {tab === "project"        && <ProjectPage kopmaten={kopmaten} kerf={kerf} kopVerlies={kopVerlies} onNaarKortlijst={(items) => {
+            const gl = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setZItems(a => [...a, ...items.map(r => ({ id: uid(), mode: "vast", kopmaat: r.kopmaat || "", stockLength: r.stockLength || gl(r.kopmaat)[0] || 0, gewensteMaat: "", matchedKopmaat: "", lengte: r.lengte, aantal: r.aantal }))]);
+            setTab("zaaglijst");
+          }} />}
+          {tab === "zaaglijst"      && <ZaaglijstPage items={zItems} setItems={setZItems} results={zResults} onCalc={calcZaaglijst} kopmaten={kopmaten} kerf={kerf} opgeslagen={opgeslagen} />}
+          {tab === "plaatmateriaal" && <PlaatPage platen={platen} items={pItems} setItems={setPItems} plaatId={pPlaatId} setPlaatId={setPPlaatId} results={pResults} onCalc={calcPlaat} kerf={kerf} />}
+          {tab === "restlijst"      && <RestlijstPage restlijst={restlijst} setRestlijst={setRestlijst} kopmaten={kopmaten} onGebruik={(resten) => {
+            const gl = km => { const k = kopmaten.find(k => k.kopmaat === km); return k && k.lengtes ? k.lengtes.split(",").map(s => +s.trim()).filter(Boolean) : []; };
+            setZItems(a => [...a, ...resten.map(r => ({ id: uid(), mode: "vast", kopmaat: r.kopmaat || "", stockLength: r.stockLength || gl(r.kopmaat)[0] || 0, gewensteMaat: "", matchedKopmaat: "", lengte: r.lengte, aantal: 1 }))]);
+            setTab("zaaglijst");
+          }} slaRestenOp={slaRestenOp} kResults={zResults} lResults={null} />}
+          {tab === "instellingen"   && <InstellingenPage platen={platen} setPlaten={setPlaten} kopmaten={kopmaten} setKopmaten={setKopmaten} kerf={kerf} setKerf={setKerf} kopVerlies={kopVerlies} setKopVerlies={setKopVerlies} projectNaam={projectNaam} setProjectNaam={setProjectNaam} opgeslagen={opgeslagen} onSave={saveProject} onLoad={loadProject} onDelete={deleteProject} />}
+        </main>
+
+        {/* EXPORT BAR */}
+        <div style={{ background: C.header, borderTop: `1px solid ${C.border}`, padding: "14px 20px", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
+          <span style={{ fontSize: 11, color: C.faint, letterSpacing: 1.5, textTransform: "uppercase", marginRight: 6 }}>Exporteer:</span>
+          <button onClick={handlePrint} style={{ ...sb(C.accent, "#fff", false), display: "flex", alignItems: "center", gap: 6 }}>
+            ⬇ Download zaagplan (.html)
+          </button>
+          <button onClick={handleEmail} style={{ ...sb(C.surface, C.muted, false, { border: `1px solid ${C.border}` }), display: "flex", alignItems: "center", gap: 6 }}>
+            ✉ Mailen
+          </button>
+        </div>
+        <footer style={{ textAlign: "center", padding: "10px", fontSize: 11, color: C.faint, letterSpacing: 1 }}>
+          ZAAGPLAN · ZAAGBLAD {kerf}MM · KOPVERLIES {kopVerlies}MM
+        </footer>
+      </div>
+    </>
+  );
+}
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+
+  </script>
+
+  <script>
+    /* ── Service Worker ── */
+    if('serviceWorker' in navigator){
+      const blob=new Blob(["const C='zaagplan-v2';\nself.addEventListener('install',e=>{self.skipWaiting();});\nself.addEventListener('activate',e=>{\n  e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==C).map(k=>caches.delete(k)))));\n  self.clients.claim();\n});\nself.addEventListener('fetch',e=>{\n  if(e.request.url.includes('anthropic.com'))return;\n  e.respondWith(caches.match(e.request).then(cached=>{\n    if(cached)return cached;\n    return fetch(e.request).then(res=>{\n      if(res.ok&&res.type!=='opaque')caches.open(C).then(c=>c.put(e.request,res.clone()));\n      return res;\n    }).catch(()=>cached||new Response('Offline',{status:503}));\n  }));\n});"],{type:'application/javascript'});
+      navigator.serviceWorker.register(URL.createObjectURL(blob))
+        .then(()=>console.log('ZaagPlan: offline klaar'))
+        .catch(e=>console.warn('SW:',e.message));
+    }
+
+    /* ── Android installeer-knop ── */
+    let _prompt;
+    window.addEventListener('beforeinstallprompt',e=>{
+      e.preventDefault();
+      _prompt=e;
+      setTimeout(()=>{
+        if(!_prompt)return;
+        const btn=document.createElement('button');
+        btn.id='install-btn';
+        btn.style.cssText='position:fixed;bottom:24px;left:50%;transform:translateX(-50%);'+
+          'background:#C07A18;color:#fff;border:none;padding:15px 32px;border-radius:50px;'+
+          'font-family:sans-serif;font-size:16px;font-weight:700;cursor:pointer;z-index:9999;'+
+          'box-shadow:0 6px 24px rgba(0,0,0,.35);white-space:nowrap;animation:slideUp .3s ease';
+        btn.innerHTML='🪚&nbsp; Installeer ZaagPlan';
+        btn.onclick=()=>{_prompt.prompt();_prompt.userChoice.then(()=>btn.remove());_prompt=null;};
+        document.body.appendChild(btn);
+      },1800);
+    });
+    window.addEventListener('appinstalled',()=>{
+      const b=document.getElementById('install-btn');
+      if(b)b.remove();
+      _prompt=null;
+    });
+  </script>
+</body>
+</html>
